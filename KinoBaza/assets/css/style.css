@@ -9,7 +9,6 @@ body {
     color: #555;
 }
 
-
 p {
     padding: 0 0 20px 0;
     line-height: 1.7em;
@@ -61,6 +60,7 @@ ul li {
     margin-left: 0px;
     margin-right: 0px;
     min-width: 900px;
+    position: relative;
 }
 
 .main, .logo, .menubar, .site_content, .footer {
@@ -224,7 +224,6 @@ hr {
     margin-bottom: 15%;
 }
 
-
 .descriptions_film img {
     float: left;
     margin-right: 2%;
@@ -363,3 +362,84 @@ td img {
     padding: 0 0 10px;
 }
 
+/* Language switcher styles */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #7268ad;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown-btn:hover {
+    background-color: #5b549a;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    min-width: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.language-switcher:hover .dropdown-content {
+    display: block;
+}
+
+/* Fix for send form */
+.send_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the form fields and button to the left */
+}
+
+.send_contact input[type="text"], 
+.send_contact textarea {
+    width: 100%; /* Make the text inputs and textarea full width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in the element's width and height */
+}
+
+.send_contact input[type="submit"] {
+    background-color: #7268AD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.send_contact input[type="submit"]:hover {
+    background-color: #5b549a;
+}

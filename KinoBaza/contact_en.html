@@ -1,103 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <meta charset="UTF-8">
-       <title>Contacts</title>
-       <meta name="description" content="Kinobaza is a portal about movies" />
-       <meta name="keywords" content="movies, movies online, hd" />
-       <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <meta name="description" content="KinoBaza - this is a portal about movies" />
+    <meta name="keywords" content="movies, movies online, hd" />
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="main">
 
-       <main>
-
-              <header class="header">
+        <div class="header">
             <div class="logo">
-                <div class="logo_text">
-                    <h1><a href="index_en.html">Kinobaza</a></h1>
-                    <h2>Movies are our passion!</h2>
-                </div>
-            </div>
+                            <div class="logo_text">
+                                   <h1><a href="index_en.html">Kinobase</a></h1>
+                                   <h2>Film is our passion!</h2>
+                            </div>
+                     </div>
+              
+              <div class="menubar">
+                     <ul class="menu">
+                            <li><a href="index_en.html">Home</a></li>
+                            <li><a href="films_en.html">Movies</a></li>
+                            <li><a href="serials_en.html">Serials</a></li>
+                            <li><a href="rating_en.html">Film Rankings</a></li>
+                            <li class="selected"><a href="contact_en.html">Contacts</a></li>
+                     </ul>
+              </div>
+       </div>
 
-            <nav class="menubar">
-                <ul class="menu">
-                    <li><a href="index_en.html">Home</a></li>
-                    <li><a href="films_en.html">Movies</a></li>
-                    <li><a href="#">Series</a></li>
-                    <li><a href="rating_en.html">Movie Ratings</a></li>
-                    <li class="selected"><a href="contact_en.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
+       <div class="language-switcher">
+        <button class="dropdown-btn">Other languages ▼</button>
+        <div class="dropdown-content">
+            <a href="index.html">Russian</a>
+            <a href="contact_en.html">English</a>
+        </div>
+    </div>
+       
+       <div class="site_content">
 
-        <section class="site_content">
+              <div class="sidebar_container">
 
-            <aside class="sidebar_container">
-                <aside class="sidebar">
-                    <h2>Search</h2>
-                    <form method="post" action="#" id="search_form">
-                        <input type="search" name="search_field" placeholder="your query" />
-                        <input type="submit" class="btn" value="search" />
-                    </form>
-                </aside>
-                
-                <aside class="sidebar">
-                    <h2>Login</h2>
-                    <form method="post" action="#" id="login">
-                        <input type="text" name="login_field" placeholder="login" />
-                        <input type="password" name="password_field" placeholder="password" />
-                        <input type="submit" class="btn" value="login" />
-                        <div class="lables_passreg_text">
-                            <span><a href="#">forgot password?</a></span> | <span><a href="#">register</a></span>
-                        </div>
-                    </form>
-                </aside>
+                     <div class="sidebar">
+                            <h2>Search</h2>
+                            <form method="post" action="#" id="search_form">
+                                   <input type="search" name="search_field" placeholder="Your request" />
+                                   <input type="submit" class="btn" value="find" />
+                            </form>
+                     </div>
+                     
+                     <div class="sidebar">
+                            <h2>Login</h2>
+                            <form method="post" action="#" id="login">
 
-                <aside class="sidebar">
-                    <h2>News</h2>
-                    <span>31.02.2018</span>
-                    <p>We have launched an advanced search</p>
-                    <a href="#">read</a>
-                </aside>
-
-                <aside class="sidebar">
-                    <h2>Movie Ratings</h2>
-                    <ul>
-                        <li><a href="show_en.html">Interstellar</a><span class="rating_sidebar">8.1</span></li>
-                        <li><a href="#">The Matrix</a><span class="rating_sidebar">8.0</span></li>
-                        <li><a href="#">Mad Max</a><span class="rating_sidebar">7.5</span></li>
-                        <li><a href="#">Cloud Atlas</a><span class="rating_sidebar">7.4</span></li>
-                    </ul>
-                </aside>
-            </aside>
-
-            <article class="content">
-                <h1>Contacts</h1>
-                <p>Send your feedback about the Kinobaza portal</p>
-                <section class="send send_contact">
-                    <form method="post" action="#" id="contact">
-                        <input type="text" name="review_name" placeholder="Your name" />
-                        <input type="text" name="review_email" placeholder="Your email" />
-                        <textarea name="review_text" placeholder="Your feedback"></textarea>
-                        <input class="btn" type="submit" value="send" />
-                    </form>
-                </section>
-            </article>
-
-        </section>
-
-        <footer class="footer">
-            <p>
-                <a href="index_en.html">Home</a> |
-                <a href="films_en.html">Movies</a> |
-                <a href="#">Series</a> |
-                <a href="rating_en.html">Movie Ratings</a> |
-                <a href="contact_en.html">Contacts</a>
-            </p>
-            <p>kinopoisk.ru</p>
-        </footer>
-
-    </main>
-
+                                   <input type="text" name="login_field" placeholder="логин" />
+                                   <input type="password" name="password_field" placeholder="пароль" />
+                                   <input type="submit" class="btn" value="Вход" />
+                                   <div class="labels_passreg_text">
+                                          <span><a href="#">forgot your password?</a></span> | <span><a href="#">
+                                            registration</a></span>
+                                   </div>
+                            </form>
+                     </div>
+                     
+                     <div class="sidebar">
+                            <h2>News</h2>
+                            <span>31.02.2018</span>
+                            <p>We've launched an advanced search</p>
+                            <a href="#">read</a>
+                     </div>
+                     
+                     <div class="sidebar">
+                            <h2>Film Rankings</h2>
+                            <ul>
+                                   <li><a href="show_en.html">Interstellar</a><span class="rating_sidebar">8.1</
+                                    span></li>
+                                   <li><a href="#">Matrix</a><span class="rating_sidebar">8.0</span></li>
+                                   <li><a href="#">Mad Max</a><span class="rating_sidebar">7.5</span></
+                                    li>
+                                   <li><a href="#">Cloud Atlas</a><span class="rating_sidebar">7.4</span>
+                                </li>
+                            </ul>
+                     </div>
+              </div>
+              
+              <div class="content">
+                     <h1>Contacts</h1>
+                     <p>Submit your review of FilmBase Portal</p>
+                     <div class="send send_contact">
+                            <form method="post" action="#" id="contact">
+                                   <input type="text" name="review_name" placeholder="your name" />
+                                   <input type="text" name="review_email" placeholder="your email" />
+                                   <textarea name="review_text"></textarea>
+                                   <input class="btn" type="submit" value="send">
+                            </form>
+                     </div>
+              </div>
+        </div>
+              
+              <div class="footer">
+                     <p>
+                            <a href="index_en.html">Home</a> |
+                            <a href="films_en.html">Films</a> |
+                            <a href="#">Serials</a> |
+                            <a href="rating_en.html">Film Rankings</a> |
+                            <a href="contact_en.html">Contacts</a>
+                     </p>
+                     <p>kinopoisk.ru</p>
+              </div>
+       </div>
 </body>
 </html>

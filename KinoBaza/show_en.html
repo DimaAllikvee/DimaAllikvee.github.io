@@ -2,83 +2,139 @@
 <html lang="en">
 <head>
        <meta charset="UTF-8">
-       <title>Movie Interstellar</title>
-       <meta name="description" content="Kinobaza - this is a portal about movies" />
+       <title>Interstellar Movie</title>
+       <meta name="description" content="Kinobase - a portal about movies" />
        <meta name="keywords" content="movies, movies online, hd" />
        <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-       <main>
 
-              <header class="header">
+       <div class="main">
+
+              <div class="header">
                      <div class="logo">
                             <div class="logo_text">
-                                   <h1><a href="index.html">Kinobaza</a></h1>
-                                   <h2>Movies - our passion!</h2>
+                                   <h1><a href="index_en.html">Kinobase</a></h1>
+                                   <h2>Cinema - our passion!</h2>
                             </div>
                      </div>
-              </header>
 
-              <nav class="menubar">
-                       
+              <div class="menubar">
+
                      <ul class="menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="selected"><a href="films.html">Movies</a></li>
-                            <li><a href="#">Series</a></li>
-                            <li><a href="rating.html">Movie ratings</a></li>
-                            <li><a href="contact.html">Contacts</a></li>
+                            <li><a href="index_en.html">Home</a></li>
+                            <li class="selected"><a href="films_en.html">Movies</a></li>
+                            <li><a href="serials_en.html">Series</a></li>
+                            <li><a href="rating_en.html">Movie Ratings</a></li>
+                            <li><a href="contact_en.html">Contact</a></li>
                      </ul>
-              </nav>
-          </nav>
+              </div>
+       </div>
 
-              <section class="site_content">
-                     <aside class="sidebar_container">
-                            <aside class="sidebar">
-                                   <h2>Search</h2>
-                                   <span class="label">Rating: </span><span class="value">8.1 / 10</span>
-                                   <span class="label">Year: </span><span class="value">2014</span>
-                                   <span class="label">Director: </span><span class="value">Christopher Nolan</span>
-                            </aside>
-                     </aside>
+       <div class="site_content">
 
-                     <article>
-                            <hr>
-                            <h2>Description Interstellar</h2>
-                            <section class="descriptions_film">
-                                   <img src="assets/img/inter.png" alt="Interstellar">
-                                   <p>When drought brings humanity to a food crisis, a team of researchers and scientists goes through a wormhole (which presumably connects areas of space-time over a great distance) on a journey to surpass previous human space travel limitations and resettle humanity on another planet.</p>
-                            </section>
-                            <hr>
-                            <h2>Reviews about Interstellar</h2>
-                            <section class="reviews">
-                                   <div class="review_name">Sergey</div>
-                                   <p class="review_text">Great movie, 3 hours flew by unnoticed.</p>
+              <div class="sidebar_container">
 
-                                   <div class="review_name">Dmitry</div>
-                                   <p class="review_text">After the movie Inception, I was eagerly awaiting more work from Christopher Nolan. Interstellar impressed me.</p>
-                            </section>
+                     <div class="sidebar">
+                            <h2>Search</h2>
+                            <form method="post" action="#" id="search_form">
+                                   <input type="search" name="search_field" placeholder="Your query" />
+                                   <input type="submit" class="btn" value="Search" />
+                            </form>
+                     </div>
 
-                            <section class="send">
-                                   <form method="post" action="#" id="review">
-                                          <input type="text" name="review_name" placeholder="your name" />
-                                          <textarea name="review_text" placeholder="your review"></textarea>
-                                          <input class="btn" type="submit" value="send">
-                                   </form>
-                            </section>
-                     </article>
-              </section>
+                     <div class="sidebar">
+                            <h2>Login</h2>
+                            <form method="post" action="#" id="login">
 
-       </main>
+                                   <input type="text" name="login_field" placeholder="Username" />
+                                   <input type="password" name="password_field" placeholder="Password" />
+                                   <input type="submit" class="btn" value="Login" />
+                                   <div class="lables_passreg_text">
+                                          <span><a href="#">Forgot password?</a></span> | <span><a href="#">
+                                          Register</a></span>
+                                   </div>
+                            </form>
+                     </div>
 
-       <footer class="footer">
+                     <div class="sidebar">
+                            <h2>News</h2>
+                            <span>31.02.2018</span>
+                            <p>We have launched an advanced search</p>
+                            <a href="#">Read more</a>
+                     </div>
+
+                     <div class="sidebar">
+                            <h2>Movie Ratings</h2>
+                            <ul>
+                                   <li><a href="show_en.html">Interstellar</a><span class="rating_sidebar">8.1</span></li>
+                                   <li><a href="#">The Matrix</a><span class="rating_sidebar">8.0</span></li>
+                                   <li><a href="#">Mad Max</a><span class="rating_sidebar">7.5</span></li>
+                                   <li><a href="#">Cloud Atlas</a><span class="rating_sidebar">7.4</span></li>
+                            </ul>
+                     </div>
+              </div>
+
+              <div class="content">
+
+                     <h1>Interstellar</h1>
+
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/R5KHoE_8dgo?showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+                     <div class="info_film_page">
+                            <span class="label">Rating: </span><span class="value">8.1 / 10</span><br>
+                            <span class="label">Year: </span><span class="value">2014</span><br>
+                            <span class="label">Director: </span><span class="value">Christopher Nolan</span>
+                     </div>
+
+                     <hr>
+                     <h2>Description of Interstellar</h2>
+                     <div class="descriptions_film">
+                            <img src="assets/img/inter.png" />
+                            As drought leads humanity to a food crisis, a group of researchers and scientists set out on a journey through a wormhole (which presumably connects regions of space-time across vast distances) in order to surpass the previous limitations of space travel and relocate humanity to another planet.
+                     </div>
+
+                     <hr>
+                     <h2>Interstellar Reviews</h2>
+                     <div class="reviews">
+                            <div class="review_name">
+                                   Sergey
+                            </div>
+                            <div class="review_text">
+                                   Great movie, 3 hours flew by unnoticed.
+                            </div>
+                     </div>
+
+                     <div class="reviews">
+                            <div class="review_name">
+                                   Dmitry
+                            </div>
+                            <div class="review_text">
+                                   After the movie Inception, I was eagerly waiting for more work from Christopher Nolan. Interstellar impressed me.
+                            </div>
+                     </div>
+
+                     <div class="send">
+                            <form method="post" action="#" id="review">
+                                   <input type="text" name="review_name" placeholder="Your name" />
+                                   <textarea name="review_text"></textarea>
+                                   <input class="btn" type="submit" value="Send" />
+                            </form>
+                     </div>
+
+              </div>
+       </div>
+
+       <div class="footer">
               <p>
-                     <a href="index.html">Home</a> |
-                     <a href="films.html">Movies</a> |
+                     <a href="index_en.html">Home</a> |
+                     <a href="films_en.html">Movies</a> |
                      <a href="#">Series</a> |
-                     <a href="rating.html">Movie ratings</a> |
-                     <a href="contact.html">Contacts</a>
+                     <a href="rating_en.html">Movie Ratings</a> |
+                     <a href="contact_en.html">Contact</a>
               </p>
               <p>kinopoisk.ru</p>
-       </footer>
+       </div>
+
 </body>
 </html>
