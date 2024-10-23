@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <title>Home Page</title>
+       <meta name="description" content="KinoBaza - a portal about movies">
+       <meta name="keywords" content="movies, online movies, hd">
+       <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+       <main class="main">
+              <header class="header">
+                     <div class="logo">
+                            <div class="logo_text">
+                                   <h1><a href="index_en.html">KinoBaza</a></h1>
+                                   <h2>Movies are our passion!</h2>
+                            </div>
+                     </div>
+                     <nav class="menubar">
+                            <ul class="menu">
+                                   <li class="selected"><a href="index_en.html">Home</a></li>
+                                   <li><a href="films_en.html">Movies</a></li>
+                                   <li><a href="serials_en.html">Series</a></li>
+                                   <li><a href="rating_en.html">Movie Ratings</a></li>
+                                   <li><a href="contact_en.html">Contacts</a></li>
+                            </ul>
+                     </nav>
+              </header>
+
+              <!-- Language switcher button -->
+              <div class="language-switcher">
+                     <form action="index.html" method="get">
+                            <button type="submit">Русский</button>
+                     </form>
+              </div>
+
+              <section class="site_content">
+                     <aside class="sidebar_container">
+                            <!-- Sidebar content -->
+                            <section class="sidebar">
+                                   <h2>Search</h2>
+                                   <form method="post" action="#" id="search_form">
+                                          <input type="search" name="search_field" placeholder="Your query" />
+                                          <input type="submit" class="btn" value="Search" />
+                                   </form>
+                            </section>
+                            <section class="sidebar">
+                                   <h2>Login</h2>
+                                   <form method="post" action="#" id="login">
+                                          <input type="text" name="login_field" placeholder="login" />
+                                          <input type="password" name="password_field" placeholder="password" />
+                                          <input type="submit" class="btn" value="Login" />
+                                          <div class="labels_passreg_text">
+                                                 <span><a href="#">forgot password?</a></span> | <span><a href="#">register</a></span>
+                                          </div>
+                                   </form>
+                            </section>
+                            <section class="sidebar">
+                                   <h2>News</h2>
+                                   <span>31.02.2018</span>
+                                   <p>We have launched an advanced search</p>
+                                   <a href="#">read</a>
+                            </section>
+                            <section class="sidebar">
+                                   <h2>Movie Ratings</h2>
+                                   <ul>
+                                          <li><a href="show_en.html">Interstellar</a><span class="rating_sidebar">8.1</span></li>
+                                          <li><a href="#">The Matrix</a><span class="rating_sidebar">8.0</span></li>
+                                          <li><a href="#">Mad Max</a><span class="rating_sidebar">7.5</span></li>
+                                          <li><a href="#">Cloud Atlas</a><span class="rating_sidebar">7.4</span></li>
+                                   </ul>
+                            </section>
+                     </aside>
+
+                     <article class="content">
+                            <h1>New Movies</h1>
+                            <section class="films_block">
+                                   <a href="#"><img src="assets/img/matrix.png" alt="Matrix"></a>
+                                   <a href="#"><img src="assets/img/max.png" alt="Max"></a>
+                                   <a href="show_en.html"><img src="assets/img/inter.png" alt="Interstellar"></a>
+                                   <a href="#"><img src="assets/img/cloud.png" alt="Cloud Atlas"></a>
+                            </section>
+
+                            <h1>New Series</h1>
+                            <section class="films_block">
+                                   <a href="#"><img src="assets/img/dead.png" alt="Dead"></a>
+                                   <a href="#"><img src="assets/img/silicon.png" alt="Silicon Valley"></a>
+                                   <a href="#"><img src="assets/img/breakingbad.png" alt="Breaking Bad"></a>
+                                   <a href="#"><img src="assets/img/xfiles.png" alt="X-Files"></a>
+                            </section>
+
+                            <div class="posts">
+                                   <hr>
+                                   <h2><a href="#">How Interstellar was filmed</a></h2>
+                                   <div class="posts_content">
+                                          <p>
+                                                 Christopher Nolan, one of the most successful directors of our time, whose works are equally loved by discerning critics and ordinary viewers, turned 45. The film was originally handled by Paramount Pictures. When Christopher Nolan took the director's seat, Warner Bros, which had been involved in his last films, joined the project.
+                                          </p>
+                                   </div>
+                                   <p><a href="#">read</a></p>
+                                   <hr>
+                                   <h2><a href="#">Actor Tom Hanks shared his impressions of the festival</a></h2>
+                                   <div class="posts_content"></div>
+                                          <p>On February 16, the 67th British Academy Film Awards ceremony took place in London. Leonardo DiCaprio, Brad Pitt, Angelina Jolie, Cate Blanchett, Helen Mirren, Amy Adams, Christian Bale, Alfonso Cuarón, and other guests and winners of the award are in our report.</p>
+                                   </div>
+                                   <p><a href="#">read</a></p>
+                            </div>
+                     </article>
+              </section>
+
+              <footer class="footer">
+                     <p>
+                            <a href="index_en.html">Home</a> |
+                            <a href="films_en.html">Movies</a> |
+                            <a href="#">Series</a> |
+                            <a href="rating_en.html">Movie Ratings</a> |
+                            <a href="contact_en.html">Contacts</a>
+                     </p>
+                     <p>kinopoisk.ru</p>
+              </footer>
+       </main>
+</body>
+</html>

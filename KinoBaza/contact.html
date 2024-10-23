@@ -9,9 +9,9 @@
 </head>
 <body>
 
-    <div class="main">
+    <main>
 
-        <div class="header">
+        <header class="header">
             <div class="logo">
                 <div class="logo_text">
                     <h1><a href="index.html">Кинобаза</a></h1>
@@ -19,29 +19,29 @@
                 </div>
             </div>
 
-              <div class="menubar">
-                     <ul class="menu">
-                            <li><a href="index.html">Главная</a></li>
-                            <li><a href="films.html">Фильмы</a></li>
-                            <li><a href="#">Сериалы</a></li>
-                            <li><a href="rating.html">Рейтинг фильмов</a></li>
-                            <li class="selected"><a href="contact.html">Контакты</a></li>
-                     </ul>
-              </div>
-        </div>
+            <nav class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="films.html">Фильмы</a></li>
+                    <li><a href="#">Сериалы</a></li>
+                    <li><a href="rating.html">Рейтинг фильмов</a></li>
+                    <li class="selected"><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="site_content">
+        <section class="site_content">
 
-            <div class="sidebar_container">
-
-                <div class="sidebar">
+            <aside class="sidebar_container">
+                <aside class="sidebar">
                     <h2>Поиск</h2>
                     <form method="post" action="#" id="search_form">
                         <input type="search" name="search_field" placeholder="ваш запрос" />
                         <input type="submit" class="btn" value="найти" />
                     </form>
-                </div>
-                <div class="sidebar">
+                </aside>
+                
+                <aside class="sidebar">
                     <h2>Вход</h2>
                     <form method="post" action="#" id="login">
                         <input type="text" name="login_field" placeholder="логин" />
@@ -51,14 +51,16 @@
                             <span><a href="#">забыли пароль?</a></span> | <span><a href="#">регистрация</a></span>
                         </div>
                     </form>
-                </div>
-                <div class="sidebar">
+                </aside>
+
+                <aside class="sidebar">
                     <h2>Новости</h2>
                     <span>31.02.2018</span>
                     <p>Мы запустили расширенный поиск</p>
                     <a href="#">читать</a>
-                </div>
-                <div class="sidebar">
+                </aside>
+
+                <aside class="sidebar">
                     <h2>Рейтинг фильмов</h2>
                     <ul>
                         <li><a href="show.html">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
@@ -66,22 +68,25 @@
                         <li><a href="#">Безумный Макс</a><span class="rating_sidebar">7.5</span></li>
                         <li><a href="#">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>
                     </ul>
-                </div>
-            </div>
-            <div class="content">
+                </aside>
+            </aside>
+
+            <article class="content">
                 <h1>Контакты</h1>
                 <p>Отправьте ваш отзыв о портале Кинобаза</p>
-                <div class="send send_contact">
+                <section class="send send_contact">
                     <form method="post" action="#" id="contact">
                         <input type="text" name="review_name" placeholder="Ваше имя" />
                         <input type="text" name="review_email" placeholder="Ваш email" />
                         <textarea name="review_text" placeholder="Ваш отзыв"></textarea>
                         <input class="btn" type="submit" value="отправить" />
                     </form>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
+                </section>
+            </article>
+
+        </section>
+
+        <footer class="footer">
             <p>
                 <a href="index.html">Главная</a> |
                 <a href="films.html">Фильмы</a> |
@@ -90,7 +95,9 @@
                 <a href="contact.html">Контакты</a>
             </p>
             <p>kinopoisk.ru</p>
-        </div>
-    </div>
+        </footer>
+
+    </main>
+
 </body>
 </html>

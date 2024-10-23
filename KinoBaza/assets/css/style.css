@@ -9,6 +9,7 @@ body {
     color: #555;
 }
 
+
 p {
     padding: 0 0 20px 0;
     line-height: 1.7em;
@@ -30,7 +31,7 @@ h1, h2 {
     font: normal 170% 'century gothic', arial;
     margin: 0 0 15px 0;
     padding: 15px 0 5px 0;
-    color: #ffffff;
+    color: #aeb002;
 }
 
 h2 {
@@ -223,6 +224,7 @@ hr {
     margin-bottom: 15%;
 }
 
+
 .descriptions_film img {
     float: left;
     margin-right: 2%;
@@ -360,3 +362,4 @@ td img {
 .footer p {
     padding: 0 0 10px;
 }
+
