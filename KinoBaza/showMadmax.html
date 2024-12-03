@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фильм: Безумный Макс</title>
+    <meta name="description" content="КиноБаза - это портал о кино" />
+    <meta name="keywords" content="фильмы, фильмы онлайн, hd, Безумный Макс" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html">КиноБаза</a></h1>
+                    <h2>Кино - наша страсть!</h2>
+                </div>
+            </div>
+
+            <nav class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="selected"><a href="films.html">Фильмы</a></li>
+                    <li><a href="serials.html">Сериалы</a></li>
+                    <li><a href="rating.html">Рейтинг фильмов</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="site_content">
+
+            <aside class="sidebar_container">
+
+                <section class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="Ваш запрос" required />
+                        <input type="submit" class="btn" value="Найти" />
+                    </form>
+                </section>
+
+                <div class="language-switcher">
+                    <button class="dropdown-btn">Другие языки ▼</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Русский</a>
+                        <a href="index_en.html">English</a>
+                    </div>
+                </div>
+
+                <section class="sidebar">
+                    <h2>Новости</h2>
+                    <time datetime="2018-02-31">31.02.2018</time>
+                    <p>Мы запустили расширенный поиск</p>
+                    <a href="#">Читать далее</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Рейтинг фильмов</h2>
+                    <ul>
+                        <li><a href="show.html">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
+                        <li><a href="showMatrix.html">Матрица</a><span class="rating_sidebar">8.0</span></li>
+                        <li><a href="showMadmax.html">Безумный Макс</a><span class="rating_sidebar">7.5</span></li>
+                        <li><a href="showCloudAtlas.html">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+
+                <h1>Безумный Макс</h1>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hEJnMQG9ev8" frameborder="0" allowfullscreen></iframe>
+
+                <div class="info_film_page">
+                    <span class="label">Рейтинг: </span><span class="value">7.5 / 10</span><br>
+                    <span class="label">Год: </span><span class="value">2015</span><br>
+                    <span class="label">Режиссер: </span><span class="value">Джордж Миллер</span>
+                </div>
+
+                <hr>
+                <h2>Описание</h2>
+                <div class="descriptions_film">
+                    <img src="assets/img/max.png" alt="Безумный Макс" />
+                    <p>«Безумный Макс: Дорога ярости» — это постапокалиптический боевик, действие которого разворачивается в пустынном мире, где властвует хаос и борьба за выживание. Главный герой Макс Рокатански объединяется с Императрицей Фуриозой, чтобы сбежать от тирана и спасти группу женщин, используемых как «матки».</p>
+                </div>
+
+                <hr>
+                <h2>Отзывы о Безумный Макс</h2>
+                <div class="reviews">
+                    <div class="review_name">Павел</div>
+                    <div class="review_text">Визуально потрясающий фильм! Отличные экшен-сцены и уникальный мир.</div>
+                </div>
+
+                <div class="reviews">
+                    <div class="review_name">Марина</div>
+                    <div class="review_text">Захватывающая история с великолепными персонажами и глубоким сюжетом.</div>
+                </div>
+
+                <div class="send">
+                    <form method="post" action="#" id="review">
+                        <input type="text" name="review_name" placeholder="Ваше имя" required />
+                        <textarea name="review_text" placeholder="Ваш отзыв" required></textarea>
+                        <input class="btn" type="submit" value="Отправить" />
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Главная</a> |
+                <a href="films.html">Фильмы</a> |
+                <a href="serials.html">Сериалы</a> |
+                <a href="rating.html">Рейтинг фильмов</a> |
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

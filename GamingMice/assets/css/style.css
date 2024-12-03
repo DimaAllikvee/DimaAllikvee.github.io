@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.2em;
+    background-color: #ffffff;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    padding: 0 0 20px 0;
+    line-height: 1.7em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+textarea {
+    color: #5d5d5d;
+    width: 60%;
+    padding: 8px 12px; /* Добавляем немного горизонтальных отступов */
+    border: 1px solid #cccccc; /* Легкая рамка */
+    border-radius: 8px; /* Закругленные углы */
+    background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Легкий градиент для фона */
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* Внутренняя тень для глубины */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Плавные эффекты */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    border-color: #5d5d5d; /* Изменяем цвет рамки при фокусе */
+    box-shadow: 0px 0px 8px rgba(93, 93, 93, 0.3); /* Подсвечиваем тень при фокусе */
+    outline: none; /* Убираем стандартный фокус */
+}
+
+
+h1, h2 {
+    font: normal 170% 'century gothic', arial;
+    margin: 0 0 15px 0;
+    padding: 15px 0 5px 0;
+    color: #615e5e;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+a, a:hover {
+    outline: none;
+    text-decoration: underline;
+    color: #615e5e;
+}
+
+ul {
+    margin: 2px 0 22px 17px;
+}
+
+ul li {
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 5px;
+    line-height: 1.5em;
+}
+
+header {
+    background: linear-gradient(135deg, rgb(1, 7, 8), rgb(17, 45, 50)); /* Переход от темного к более светлому */
+    height: 177px;
+    font-size: 0.8em;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 900px;
+    position: relative;
+}
+
+
+.main, .logo, .menubar, .site_content, footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 880px;
+    padding-bottom: 40px;
+}
+
+.logo h1, .logo h2 {
+    font: normal 300% 'century gothic', arial, sans-serif;
+    margin: 0 0 0 9px;
+}
+
+.logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {
+    padding: 22px 0 0 0;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+.logo_text h2 {
+    font-size: 0.9em;
+    padding: 4px 0 0 0;
+    color: #999;
+}
+
+.menubar {
+    width: 900px;
+    height: 46px;
+}
+
+ul.menu {
+    float: right;
+}
+
+ul.menu li {
+    float: left;
+    padding: 0 0 0 9px;
+    list-style: none;
+    margin: 1px 2px 0 0;
+}
+
+ul.menu li a {
+    font: normal 100% 'trebuchet ms', sans-serif;
+    display: block;
+    height: 20px;
+    padding: 6px 35px 5px 28px;
+    color: #fefefe;
+    text-decoration: none;
+}
+
+ul.menu li.selected a {
+    color: #ffffff;
+}
+
+ul.menu li a:hover {
+    color: #ac9892;
+}
+
+hr {
+    border: solid 1px #ffffff;
+}
+
+.site_content {
+    width: 880px;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    background-color: #ffffff;
+}
+
+.sidebar_container {
+    float: right;
+    width: 224px;
+}
+
+.sidebar {
+    float: right;
+    width: 222px;
+    padding: 5%;
+    margin: 0 0 16px 0;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #ffffff, #e6e6e6); /* Плавный переход от белого к светло-серому */
+}
+
+
+.btn {
+    padding: 10px 20px; /* Пространство внутри кнопки */
+    background: linear-gradient(135deg, #e0e0e0, #e0e0e0); /* Светлый градиент */
+    border: 1px solid #cccccc; /* Легкая рамка */
+    border-radius: 25px; /* Закругленные углы */
+    cursor: pointer;
+    font-size: 1em;
+    color: #333333; /* Цвет текста */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff); /* Градиент при наведении */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Усиленная тень при наведении */
+}
+
+
+.sidebar h2 {
+    color: #030608;
+}
+
+.labels_passreg_text {
+    font-size: 1em;
+    margin-top: 3%;
+    margin-left: 2%;
+    color: #5d5d5d; /* Нейтральный цвет текста */
+}
+
+.labels_passreg_text a {
+    color: #070c13; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.labels_passreg_text a:hover {
+    color: #6f6294; /* Изменяем цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+
+.sidebar ul {
+    margin: 0;
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    margin: 0 0 0 0;
+}
+
+.sidebar .rating_sidebar {
+    float: right;
+}
+
+.content {
+    text-align: left;
+    width: 620px;
+    padding: 0 0 0 5px;
+    float: left;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+.mouse_block {
+    margin-bottom: 5%;
+}
+
+.mouse_block img {
+    border-radius: 5px;
+    border: solid 3px #000000;
+    width: 22%;
+}
+
+.posts .posts_content {
+    font-size: 0.8em;
+}
+
+/* Страница просмотра фильма */
+.info_film_page {
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.info_film_page .label {
+    font-size: 1.2em;
+}
+
+
+.info_film_page .value {
+    font-size: 1em;
+    color: #49945A;
+    margin-right: 3%;
+}
+
+.descriptions_film {
+    margin-bottom: 15%;
+}
+
+.descriptions_film img {
+    float: left;
+    margin-right: 2%;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+}
+
+.reviews {
+    margin-bottom: 4%;
+    font-size: 0.9em;
+}
+
+.reviews .review_name {
+    background-color: #7268ad;
+    color: white;
+    padding: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.reviews .review_text {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+}
+
+.send {
+    margin-bottom: 4%;
+}
+
+.send input[type="text"], .send textarea {
+    border: solid 1px #C3C3C3;
+    margin-bottom: 2%;
+}
+
+.send input[type="text"] {
+    width: 98%;
+}
+
+.send textarea {
+    width: 624px;
+    height: 200px;
+}
+
+.send input[type="submit"] {
+    background-color: #7268AD;
+    padding: 3%;
+    color: white;
+    border-radius: 5px;
+}
+
+.send_contact input[type="text"] {
+    width: 500px;
+}
+
+.send_contact textarea {
+    width: 516px;
+}
+
+.info_film {
+    margin-bottom: 5%;
+    background-color: #f9f9f9;
+    padding: 5%;
+    height: 270px;
+}
+
+.info_film img {
+    float: left;
+    margin-right: 2%;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+    width: 25%;
+}
+
+.button {
+    background-color: #7268ad;
+    padding: 2%;
+    color: white;
+    border-radius: 5px;
+    float: right;
+    margin-top: 5%;
+    clear: both;
+    font-size: 0.8em;
+}
+
+.button a {
+    color: white;
+}
+
+table {
+    width: 100%;
+    border: solid 1px #f4f4f4;
+}
+
+td {
+    padding: 2%;
+    border: solid 1px #f4f4f4;
+}
+
+td img {
+    width: 153px;
+    vertical-align: middle;
+}
+
+.center {
+    text-align: center;
+}
+
+.rating {
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    padding: 28px 0 5px 0;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #a8aa94;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 900px;
+}
+
+footer a {
+    color: #a8aa94;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+footer p {
+    padding: 0 0 10px;
+}
+
+/* Language switcher styles */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #3f3c52;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown-btn:hover {
+    background-color: #5b549a;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    min-width: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.language-switcher:hover .dropdown-content {
+    display: block;
+}
+
+/* Fix for send form */
+.send_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the form fields and button to the left */
+}
+
+.send_contact input[type="text"], 
+.send_contact textarea {
+    width: 100%; /* Make the text inputs and textarea full width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in the element's width and height */
+}
+
+.send_contact input[type="submit"] {
+    background-color: #7268AD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.send_contact input[type="submit"]:hover {
+    background-color: #5b549a;
+}
+
+
+/* CSS Mobile */
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+
+    header {
+        background: linear-gradient(135deg, rgb(0, 0, 0), rgb(235, 215, 255));
+        min-width: 100%;
+        height: 20%;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    td {
+        font-size: 100%;
+        padding: 50px;
+    }
+
+    .site_content {
+        width: 100%;
+    }
+
+    .menubar {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .site_content {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .sidebar_container {
+        display: none;
+    }
+    
+    footer {
+        display: none;
+    }
+    
+    ul.menu {
+        float: none;
+    }
+    
+    ul.menu li {
+        margin: 0;
+        padding: 0;
+        float: none;
+    }
+    
+    .logo h1 {
+        font: normal 235% 'century gothic', arial, sans-serif;
+    }
+    
+    .logo h2 {
+        font: normal 100% 'century gothic', arial, sans-serif;
+        color: white;
+    }
+    
+    .content h1, h2 {
+        font: normal 110% 'century gothic', arial;
+    }
+    
+    .mouse_block img {
+        width: 43%;
+    }
+
+    .posts_content p { 
+        line-height: 1.5em; 
+        padding: 3%;
+        text-align: left;
+    }
+    
+    .posts p {
+        font-size: 120%;
+    }
+    
+    /* fimls page */
+    
+    .info_film {
+        float: none;
+        height: 100%;
+    }
+    
+    .info_film img { 
+        margin-bottom: 5%;
+    }
+    
+    .button {
+        float: none;
+    }
+
+    /* rating page */
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Ensure borders are collapsed */
+    }
+        
+    }
+
+    th {
+        font-size: 75%;
+    }
+
+    td {
+        font-size: 100%;
+        
+    }
+
+    td img {
+        width: 200px;
+    }
+
+    /* show page */
+    iframe {
+        width: 88%;
+        height: 100%;
+    }
+
+    .descriptions_film {
+        width: 90%;
+        text-align: left; 
+        margin-left: 2%;
+    }
+    
+    .descriptions_film img {
+        float: none;
+        width: 73%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-left: 11%;
+        margin-bottom: 7%;
+    }
+    
+    .reviews {
+        text-align: left;
+        width: 96%;
+    }
+    
+    .send input[type="text"] {
+        width: 80%;
+    }
+
+    .send input[type="text"] {
+        width: 830px;
+    }
+
+    .send textarea {
+        width: 85%;
+        
+    }
+    input, textarea {
+        outline: 1;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        width: 830px;
+    }
+    
+

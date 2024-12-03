@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Film: The Matrix</title>
+    <meta name="description" content="Kinobase - a portal about movies" />
+    <meta name="keywords" content="movies, online films, HD, The Matrix" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index_en.html">Kinobase</a></h1>
+                    <h2>Film is our passion!</h2>
+                </div>
+            </div>
+
+            <nav class="menubar">
+                <ul class="menu">
+                    <li><a href="index_en.html">Home</a></li>
+                    <li class="selected"><a href="films_en.html">Films</a></li>
+                    <li><a href="serials_en.html">Serials</a></li>
+                    <li><a href="rating_en.html">Movie Rating</a></li>
+                    <li><a href="contact_en.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="site_content">
+
+            <aside class="sidebar_container">
+
+                <section class="sidebar">
+                    <h2>Search</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="Your request" required />
+                        <input type="submit" class="btn" value="Search" />
+                    </form>
+                </section>
+
+                <div class="language-switcher">
+                    <button class="dropdown-btn">Other languages ▼</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Russian</a>
+                        <a href="index_en.html">English</a>
+                    </div>
+                </div>
+
+                <section class="sidebar">
+                    <h2>News</h2>
+                    <time datetime="2018-02-31">31.02.2018</time>
+                    <p>We have launched an advanced search</p>
+                    <a href="#">Read more</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Movie Rating</h2>
+                    <ul>
+                        <li><a href="show.html">Interstellar</a><span class="rating_sidebar">8.1</span></li>
+                        <li><a href="showMatrix.html">The Matrix</a><span class="rating_sidebar">8.0</span></li>
+                        <li><a href="showMadmax.html">Mad Max</a><span class="rating_sidebar">7.5</span></li>
+                        <li><a href="showCloudAtlas.html">Cloud Atlas</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+
+                <h1>The Matrix</h1>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allowfullscreen></iframe>
+
+                <div class="info_film_page">
+                    <span class="label">Rating: </span><span class="value">8.0 / 10</span><br>
+                    <span class="label">Year: </span><span class="value">1999</span><br>
+                    <span class="label">Directors: </span><span class="value">Lana and Lilly Wachowski</span>
+                </div>
+
+                <hr>
+                <h2>Description</h2>
+                <div class="descriptions_film">
+                    <img src="assets/img/matrix.png" alt="The Matrix" />
+                    <p>In the movie The Matrix, the main character, Neo, discovers that the world he lives in is a virtual simulation created to hide the real reality where humanity is enslaved by machines. Neo must decide which reality to choose - the one he lives in or the real one, full of danger and struggle for freedom.</p>
+                </div>
+
+                <hr>
+                <h2>Reviews about The Matrix</h2>
+                <div class="reviews">
+                    <div class="review_name">Alexander</div>
+                    <div class="review_text">A great movie that changed my perspective on reality and technology. Gripping plot and stunning visual work.</div>
+                </div>
+
+                <div class="reviews">
+                    <div class="review_name">Irina</div>
+                    <div class="review_text">The Matrix is not just a movie, it's a philosophy. Highly recommended for those who enjoy science fiction and alternative reality themes.</div>
+                </div>
+
+                <div class="send">
+                    <form method="post" action="#" id="review">
+                        <input type="text" name="review_name" placeholder="Your name" required />
+                        <textarea name="review_text" placeholder="Your review" required></textarea>
+                        <input class="btn" type="submit" value="Send" />
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index_en.html">Home</a> |
+                <a href="films_en.html">Films</a> |
+                <a href="serials_en.html">Serials</a> |
+                <a href="rating_en.html">Movie Rating</a> |
+                <a href="contact_en.html">Contact</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

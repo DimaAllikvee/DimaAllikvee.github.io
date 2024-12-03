@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <title>Главная страница</title>
+       <meta name="description" content="Кинобаза - это портал о кино">
+       <meta name="keywords" content="фильмы, фильмы онлайн, hd">
+       <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+       <div class="main">
+              <header>
+                     <div class="logo">
+                            <div class="logo_text">
+                                   <h1><a href="index.html">КиноБаза</a></h1>
+                                   <h2>Кино - наша страсть!</h2>
+                            </div>
+                     </div>
+
+                     <nav class="menubar">
+                            <ul class="menu">
+                                   <li class="selected"><a href="index.html">Главная</a></li>
+                                   <li><a href="films.html">Фильмы</a></li>
+                                   <li><a href="serials.html">Сериалы</a></li>
+                                   <li><a href="rating.html">Рейтинг фильмов</a></li>
+                                   <li><a href="contact.html">Контакты</a></li>
+                            </ul>
+                     </nav>
+
+                     <div class="language-switcher">
+                            <button class="dropdown-btn">Other languages ▼</button>
+                            <div class="dropdown-content">
+                                   <a href="index.html">Русский</a>
+                                   <a href="index_en.html">English</a>
+                            </div>
+                     </div>
+              </header>
+
+              <main class="site_content">
+                     <aside class="sidebar_container">
+                            <section class="sidebar">
+                                   <h2>Поиск</h2>
+                                   <form method="post" action="#" id="search_form">
+                                          <input type="search" name="search_field" placeholder="Ваш запрос" />
+                                          <input type="submit" class="btn" value="найти" />
+                                   </form>
+                            </section>
+                            
+                            <section class="sidebar">
+                                   <h2>Вход</h2>
+                                   <form method="post" action="#" id="login">
+                                          <input type="text" name="login_field" placeholder="логин" />
+                                          <input type="password" name="password_field" placeholder="пароль" />
+                                          <input type="submit" class="btn" value="Вход" />
+                                          <div class="labels_passreg_text">
+                                                 <span><a href="#">забыли пароль?</a></span> | <span><a href="#">регистрация</a></span>
+                                          </div>
+                                   </form>
+                            </section>
+
+                            <section class="sidebar">
+                                   <h2>Новости</h2>
+                                   <time datetime="2018-02-28">28.02.2018</time>
+                                   <p>Мы запустили расширенный поиск</p>
+                                   <a href="#">читать</a>
+                            </section>
+
+                            <section class="sidebar">
+                                   <h2>Рейтинг фильмов</h2>
+                                   <ul>
+                                          <li><a href="show.html">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
+                                          <li><a href="showMatrix.html">Матрица</a><span class="rating_sidebar">8.0</span></li>
+                                          <li><a href="showMadmax.html">Безумный Макс</a><span class="rating_sidebar">7.5</span></li>
+                                          <li><a href="showCloudAtlas.html">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>
+                                   </ul>
+                            </section>
+                     </aside>
+
+                     <section class="content">
+                            <h1>Новые фильмы</h1>
+                            <div class="films_block">
+                                   <a href="showMatrix.html"><img src="assets/img/matrix.png" alt="Matrix"></a>
+                                   <a href="showMadmax.html"><img src="assets/img/max.png" alt="Max"></a>
+                                   <a href="show.html"><img src="assets/img/inter.png" alt="Interstellar"></a>
+                                   <a href="showCloudAtlas.html"><img src="assets/img/cloud.png" alt="Cloud Atlas"></a>
+                            </div>
+
+                            <h1>Новые сериалы</h1>
+                            <div class="films_block">
+                                   <a href="showDead.html"><img src="assets/img/dead.png" alt="Dead"></a>
+                                   <a href="showsilicon.html"><img src="assets/img/silicon.png" alt="Silicon Valley"></a>
+                                   <a href="showbreakingbad.html"><img src="assets/img/breakingbad.png" alt="Breaking Bad"></a>
+                                   <a href="showxfiles.html"><img src="assets/img/xfiles.png" alt="X-Files"></a>
+                            </div>
+
+                            <article class="posts">
+                                   <hr>
+                                   <h2><a href="#">Как снимали Интерстеллар</a></h2>
+                                   <div class="posts_content">
+                                          <p>
+                                                 45 лет исполнилось режиссеру Кристоферу Нолану - одному из самых успешных
+                                                 режиссеров нашего времени, чье работы одинаково любимы как взыскательными критиками, так и простыми зрителями.
+                                                 Фильмом изначально занималась студия Paramount Pictures. Когда Кристофер Нолан занял место режиссера, студия Warner Bros, 
+                                                 которая создавала его последние фильмы, также присоединилась к проекту.
+                                          </p>
+                                   </div>
+                                   <p><a href="#">читать</a></p>
+                            </article>
+
+                            <hr>
+
+                            <article class="posts">
+                                   <h2><a href="#">Актер Том Хенкс поделился впечатлением о фестивале</a></h2>
+                                   <div class="posts_content">
+                                          <p>16 февраля в Лондоне состоялась 67-я церемония вручения наград Британской киноакадемии. Леонардо ДиКаприо, Брэд Питт, 
+                                          Анджелина Джоли, Кейт Бланшетт, Хелен Миррен, Эми Адамс, Кристиан Бэйл, Альфонсо Куарон и другие гости и победители премии - в нашем репортаже.</p>
+                                   </div>
+                                   <p><a href="#">читать</a></p>
+                            </article>
+                     </section>
+              </main>
+
+              <footer>
+                     <p>
+                            <a href="index.html">Главная</a> |
+                            <a href="films.html">Фильмы</a> |
+                            <a href="serials.html">Сериалы</a> |
+                            <a href="rating.html">Рейтинг фильмов</a> |
+                            <a href="contact.html">Контакты</a>
+                     </p>
+                     <p>kinopoisk.ru</p>
+              </footer>
+       </div>
+
+</body>
+</html>

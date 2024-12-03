@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Film Cloud Atlas</title>
+    <meta name="description" content="KinoBaza - a portal about movies" />
+    <meta name="keywords" content="movies, movies online, hd, Cloud Atlas" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index_en.html">KinoBaza</a></h1>
+                    <h2>Movies are our passion!</h2>
+                </div>
+            </div>
+
+            <nav class="menubar">
+                <ul class="menu">
+                    <li><a href="index_en.html">Home</a></li>
+                    <li class="selected"><a href="films_en.html">Films</a></li>
+                    <li><a href="serials_en.html">Series</a></li>
+                    <li><a href="rating_en.html">Film Ratings</a></li>
+                    <li><a href="contact_en.html">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="site_content">
+
+            <aside class="sidebar_container">
+
+                <section class="sidebar">
+                    <h2>Search</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="Your query" required />
+                        <input type="submit" class="btn" value="Find" />
+                    </form>
+                </section>
+
+                <div class="language-switcher">
+                    <button class="dropdown-btn">Other languages ▼</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Russian</a>
+                        <a href="index_en.html">English</a>
+                    </div>
+                </div>
+
+                <section class="sidebar">
+                    <h2>News</h2>
+                    <time datetime="2018-02-31">31.02.2018</time>
+                    <p>We have launched advanced search</p>
+                    <a href="#">Read more</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Film Ratings</h2>
+                    <ul>
+                        <li><a href="show_en.html">Interstellar</a><span class="rating_sidebar">8.1</span></li>
+                        <li><a href="showMatrix_en.html">The Matrix</a><span class="rating_sidebar">8.0</span></li>
+                        <li><a href="showMadmax_en.html">Mad Max</a><span class="rating_sidebar">7.5</span></li>
+                        <li><a href="showCloudAtlas_en.html">Cloud Atlas</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+
+                <h1>Cloud Atlas</h1>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hWnAqFyaQ5s" frameborder="0" allowfullscreen></iframe>
+
+                <div class="info_film_page">
+                    <span class="label">Rating: </span><span class="value">7.4 / 10</span><br>
+                    <span class="label">Year: </span><span class="value">2012</span><br>
+                    <span class="label">Directors: </span><span class="value">Lana Wachowski, Lilly Wachowski, Tom Tykwer</span>
+                </div>
+
+                <hr>
+                <h2>Description</h2>
+                <div class="descriptions_film">
+                    <img src="assets/img/cloud.png" alt="Cloud Atlas Film" />
+                    <p>"Cloud Atlas" is a film intertwining multiple stories set in different eras but connected by a common theme: how the actions of individuals can impact the past, present, and future. The film explores ideas of reincarnation, free will, and the struggle for independence in a world full of oppression.</p>
+                </div>
+
+                <hr>
+                <h2>Reviews</h2>
+                <div class="reviews">
+                    <div class="review_name">Svetlana</div>
+                    <div class="review_text">A very profound film that makes you think about the nature of time and the connection between generations. Every time I watch it, I discover something new.</div>
+                </div>
+
+                <div class="reviews">
+                    <div class="review_name">Dmitry</div>
+                    <div class="review_text">Excellent production and incredible script. This is a film worth watching multiple times to fully understand its meaning.</div>
+                </div>
+
+                <div class="send">
+                    <form method="post" action="#" id="review">
+                        <input type="text" name="review_name" placeholder="Your name" required />
+                        <textarea name="review_text" placeholder="Your review" required></textarea>
+                        <input class="btn" type="submit" value="Submit" />
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index_en.html">Home</a> |
+                <a href="films_en.html">Films</a> |
+                <a href="serials_en.html">Series</a> |
+                <a href="rating_en.html">Film Ratings</a> |
+                <a href="contact_en.html">Contacts</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

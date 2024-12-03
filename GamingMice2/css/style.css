@@ -1,0 +1,242 @@
+.header a:hover {
+    color: #f0ad4e; /* Изменение цвета при наведении */
+    text-decoration: none; /* Убрать подчеркивание */
+    transform: scale(1.1); /* Лёгкое увеличение */
+    transition: transform 0.3s ease-in-out, color 0.3s ease; /* Плавный переход */
+}
+
+.header h1 {
+    letter-spacing: 10px; /* Уменьшение расстояния между буквами для визуального улучшения */
+    font-size: 400%; /* Увеличение размера шрифта */
+    margin: 20px 0; /* Добавление отступов сверху и снизу */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр для выразительности */
+}
+
+.header p {
+    color: white !important;
+    font-size: 110%; /* Увеличение размера описания */
+    letter-spacing: 4px; /* Увеличение расстояния между буквами */
+}
+
+.navbar-brand {
+    font-size: 150%; /* Увеличение шрифта логотипа */
+    font-weight: bold; /* Жирный шрифт для логотипа */
+    text-transform: uppercase; /* Преобразование текста логотипа в верхний регистр */
+    letter-spacing: 3px; /* Расстояние между буквами логотипа */
+    color: #f0ad4e !important; /* Цвет логотипа */
+}
+
+.navbar-brand:hover {
+    color: #e69538 !important; /* Цвет логотипа при наведении */
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #346270;
+}
+
+.nav-pills>li>a {
+    color: #fff;
+}
+
+
+
+.nav-pills>li>a:hover {
+    background-color: #346270;
+}
+
+.nav-item a {
+    color: white; /* Исходный цвет текста */
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; /* Плавный переход */
+}
+
+.nav-item a:hover {
+    color: #f0ad4e; /* Цвет при наведении */
+    transform: scale(1.0); /* Увеличение текста */
+    text-shadow: 0 4px 8px rgba(240, 173, 78, 0.6); /* Лёгкая тень текста */
+    text-decoration: underline; /* Подчёркивание при наведении */
+}
+
+
+.navbar-inverse {
+    padding: 1%;
+    border-radius: 0;
+}
+
+@media (max-width: 767px) {
+    .nav-pills>li {
+        float: none;
+    }
+
+    .nav-pills {
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 280%;
+        letter-spacing: 5px;
+    }
+
+    .header {
+        padding: 40px 0; /* Увеличение отступов в header */
+        text-align: center; /* Центрирование текста */
+        background-color: #222; /* Фон для header */
+        border-bottom: 3px solid #f0ad4e; /* Нижняя граница для выделения */
+    }
+}
+
+.clear {
+    clear: both;
+    height: 63px;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.films_block {
+    text-align: center;
+    border: 2px solid #dad7d5; /* Добавлена рамка вокруг всего блока */
+    border-radius: 10px; /* Закруглённые углы для блока */
+    padding: 10px; /* Внутренний отступ для блока */
+    margin-bottom: 15px; /* Отступ между блоками */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.img-fluid:hover {
+    transform: scale(1.1); /* Увеличение размера */
+    transition: transform 0.3s ease-in-out; /* Плавный переход */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Добавление тени */
+}
+
+.film_label:hover {
+    transform: scale(1.05); /* Лёгкое увеличение блока при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+}
+.films_block:hover {
+    transform: scale(1.05); /* Лёгкое увеличение блока при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Тень при наведении */
+}
+
+.films_block img {
+    margin-bottom: 10px; /* Отступ между изображением и текстом */
+    border-radius: 5px; /* Закругление углов */
+    border: solid 2px #dad7d5; /* Рамка */
+    width: 100%; /* Адаптация ширины */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+
+.films_block:hover img {
+    transform: scale(1.2); /* Увеличение изображения */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Добавление тени */
+}
+
+.film_label {
+    padding: 5px 0;
+    margin-bottom: 4px;
+    font-weight: bold; /* Сделать текст жирным */
+    color: #333; /* Цвет текста */
+}
+
+
+.margin-8 {
+    margin-top: 8%;
+}
+
+.panel {
+    border: none;
+}
+
+.panel-body {
+    background-color: #f9f9f9;
+}
+
+.panel-info>.panel-heading {
+    background-color: #f0ad4e;
+    color: white;
+    border-color: transparent;
+}
+
+.sidebar-header {
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.input-lg {
+    font-size: 14px;
+}
+
+.list-group-item-warning {
+    color: #8a6d3b;
+    background-color: #f9f9f9;
+}
+
+.badge {
+    background-color: #000000;
+}
+
+.info-block {
+    font-size: 120%;
+}
+
+.info-block .badge {
+    font-size: 80%;
+}
+
+.info-block span {
+    margin-right: 3%;
+}
+
+textarea.form-control {
+    height: 200px;
+}
+
+.table tbody>tr>td.vert-align {
+    vertical-align: middle;
+}
+
+footer {
+    color: #666;
+    background: #222;
+    padding: 17px 0 18px 0;
+    border-top: 1px solid #000;
+}
+
+footer a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    color: #efefef;
+    text-decoration: underline;
+}
+
+
+
+
+button, .btn {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #e69538;
+    transform: scale(1.05);
+}

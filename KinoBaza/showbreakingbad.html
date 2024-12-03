@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сериал Во все тяжкие</title>
+    <meta name="description" content="КиноБаза - это портал о фильмах и сериалах" />
+    <meta name="keywords" content="сериалы, онлайн, Во все тяжкие, криминал, драма" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html">КиноБаза</a></h1>
+                    <h2>Кино - наша страсть!</h2>
+                </div>
+            </div>
+
+            <nav class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="films.html">Фильмы</a></li>
+                    <li class="selected"><a href="serials.html">Сериалы</a></li>
+                    <li><a href="rating.html">Рейтинг фильмов</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="site_content">
+
+            <aside class="sidebar_container">
+
+                <section class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="Ваш запрос" required />
+                        <input type="submit" class="btn" value="Найти" />
+                    </form>
+                </section>
+
+                <div class="language-switcher">
+                    <button class="dropdown-btn">Другие языки ▼</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Русский</a>
+                        <a href="index_en.html">English</a>
+                    </div>
+                </div>
+
+                <section class="sidebar">
+                    <h2>Новости</h2>
+                    <time datetime="2018-02-31">31.02.2018</time>
+                    <p>Мы запустили расширенный поиск</p>
+                    <a href="#">Читать далее</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Рейтинг сериалов</h2>
+                    <ul>
+                        <li><a href="breakingbad.html">Во все тяжкие</a><span class="rating_sidebar">8.9</span></li>
+                        <li><a href="walkingdead.html">Ходячие мертвецы</a><span class="rating_sidebar">8.5</span></li>
+                        <li><a href="silicon.html">Кремниевая долина</a><span class="rating_sidebar">8.2</span></li>
+                        <li><a href="xfiles.html">Секретные материалы</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+
+                <h1>Во все тяжкие</h1>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ajqH35t94cw?si=itKJDUSBTjzvYbWZ" frameborder="0" allowfullscreen></iframe>
+
+                <div class="info_film_page">
+                    <span class="label">Рейтинг: </span><span class="value">9.5 / 10</span><br>
+                    <span class="label">Год: </span><span class="value">2008</span><br>
+                    <span class="label">Создатель: </span><span class="value">Винс Гиллиган</span>
+                </div>
+
+                <hr>
+                <h2>Описание Во все тяжкие</h2>
+                <div class="descriptions_film">
+                    <img src="assets/img/breakingbad.png" alt="Во все тяжкие" />
+                    <p>"Во все тяжкие" рассказывает историю Уолтера Уайта, школьного учителя химии, который превращается в наркобарона. Это криминальная драма, полная напряженных моментов и глубоких персонажей.</p>
+                </div>
+
+                <hr>
+                <h2>Отзывы о Во все тяжкие</h2>
+                <div class="reviews">
+                    <div class="review_name">Михаил</div>
+                    <div class="review_text">Лучший сериал в жанре криминальной драмы. Брайан Крэнстон просто гениален!</div>
+                </div>
+
+                <div class="reviews">
+                    <div class="review_name">Светлана</div>
+                    <div class="review_text">Этот сериал захватывает с первой серии и держит до самого конца. Великолепная актерская игра и сюжет.</div>
+                </div>
+
+                <div class="send">
+                    <form method="post" action="#" id="review">
+                        <input type="text" name="review_name" placeholder="Ваше имя" required />
+                        <textarea name="review_text" placeholder="Ваш отзыв" required></textarea>
+                        <input class="btn" type="submit" value="Отправить" />
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Главная</a> |
+                <a href="films.html">Фильмы</a> |
+                <a href="serials.html">Сериалы</a> |
+                <a href="rating.html">Рейтинг фильмов</a> |
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

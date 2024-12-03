@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сериал Ходячие мертвецы</title>
+    <meta name="description" content="КиноБаза - это портал о фильмах и сериалах" />
+    <meta name="keywords" content="сериалы, онлайн, Ходячие мертвецы, зомби" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html">КиноБаза</a></h1>
+                    <h2>Кино - наша страсть!</h2>
+                </div>
+            </div>
+
+            <nav class="menubar">
+                <ul class="menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="films.html">Фильмы</a></li>
+                    <li class="selected"><a href="serials.html">Сериалы</a></li>
+                    <li><a href="rating.html">Рейтинг фильмов</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="site_content">
+
+            <aside class="sidebar_container">
+
+                <section class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="Ваш запрос" required />
+                        <input type="submit" class="btn" value="Найти" />
+                    </form>
+                </section>
+
+                <div class="language-switcher">
+                    <button class="dropdown-btn">Другие языки ▼</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Русский</a>
+                        <a href="index_en.html">English</a>
+                    </div>
+                </div>
+
+                <section class="sidebar">
+                    <h2>Новости</h2>
+                    <time datetime="2018-02-31">31.02.2018</time>
+                    <p>Мы запустили расширенный поиск</p>
+                    <a href="#">Читать далее</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Рейтинг сериалов</h2>
+                    <ul>
+                        <li><a href="showbreakingbad.html">Во все тяжкие</a><span class="rating_sidebar">8.9</span></li>
+                        <li><a href="showwalkingdead.html">Ходячие мертвецы</a><span class="rating_sidebar">8.5</span></li>
+                        <li><a href="showsilicon.html">Кремниевая долина</a><span class="rating_sidebar">8.2</span></li>
+                        <li><a href="showxfiles.html">Секретные материалы</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+
+                <h1>Ходячие мертвецы</h1>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RxKHoE_8dgo?showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+                <div class="info_film_page">
+                    <span class="label">Рейтинг: </span><span class="value">8.2 / 10</span><br>
+                    <span class="label">Год: </span><span class="value">2010</span><br>
+                    <span class="label">Режиссер: </span><span class="value">Фрэнк Дарабонт</span>
+                </div>
+
+                <hr>
+                <h2>Описание</h2>
+                <div class="descriptions_film">
+                    <img src="assets/img/dead.png" alt="Ходячие мертвецы" />
+                    <p>Сериал рассказывает о выживших после апокалипсиса зомби. Они должны объединиться, чтобы выжить среди опасностей как мертвецов, так и живых.</p>
+                </div>
+
+                <hr>
+                <h2>Отзывы</h2>
+                <div class="reviews">
+                    <div class="review_name">Ольга</div>
+                    <div class="review_text">Отличный сериал, держит в напряжении с первой до последней серии!</div>
+                </div>
+
+                <div class="reviews">
+                    <div class="review_name">Иван</div>
+                    <div class="review_text">Лучший постапокалиптический сериал, который я когда-либо смотрел.</div>
+                </div>
+
+                <div class="send">
+                    <form method="post" action="#" id="review">
+                        <input type="text" name="review_name" placeholder="Ваше имя" required />
+                        <textarea name="review_text" placeholder="Ваш отзыв" required></textarea>
+                        <input class="btn" type="submit" value="Отправить" />
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Главная</a> |
+                <a href="films.html">Фильмы</a> |
+                <a href="serials.html">Сериалы</a> |
+                <a href="rating.html">Рейтинг фильмов</a> |
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

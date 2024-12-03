@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Рейтинг девайсов</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Style -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="bg-dark text-white py-3">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">MiceBase</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mouses.html">Мышки</a></li>
+                        <li class="nav-item"><a class="nav-link" href="keyboards.html">Клавиатуры</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="rating_devices.html">Рейтинг девайсов</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index_en.html">English</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-lg-3">
+                <div class="card mb-4">
+                    <div class="card-header">Поиск</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Ваш запрос">
+                                <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Вход</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Логин">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Пароль">
+                            </div>
+                            <button class="btn btn-warning w-100" type="submit">Вход</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Новости</div>
+                    <div class="card-body">
+                        <p>31.02.2017</p>
+                        <p>Мы запустили новый сервис</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Лучшие девайсы</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_mouse1.html">ZA-13-DW</a>
+                                <span class="badge bg-primary rounded-pill">8.9</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_keyboard2.html">DPP 87 Ink</a>
+                                <span class="badge bg-primary rounded-pill">8.7</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_mouse3.html">Viper-V3</a>
+                                <span class="badge bg-primary rounded-pill">8.5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_keyboard4.html">WOOTING 60HE</a>
+                                <span class="badge bg-primary rounded-pill">8.3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <section class="col-lg-9">
+                <h1>Рейтинг девайсов</h1>
+                <hr>
+                <section>
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th></th>
+                                <th class="text-center">Девайс</th>
+                                <th class="text-center">Тип</th>
+                                <th class="text-center">Рейтинг</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-lg-1">
+                                    <img class="img-fluid img-thumbnail" src="assets/img/1-za13-dw-top.png" alt="ZA-13-DW">
+                                </td>
+                                <td><a href="show_mouse1.html">ZA-13-DW</a></td>
+                                <td class="text-center">Мышка</td>
+                                <td class="text-center"><span class="badge bg-primary">8.9</span></td>
+                            </tr>
+                            <tr>
+                                <td class="col-lg-1">
+                                    <img class="img-fluid img-thumbnail" src="assets/img/DPP 87 Ink.png" alt="DPP 87 Ink">
+                                </td>
+                                <td><a href="show_keyboard2.html">DPP 87 Ink</a></td>
+                                <td class="text-center">Клавиатура</td>
+                                <td class="text-center"><span class="badge bg-primary">8.7</span></td>
+                            </tr>
+                            <tr>
+                                <td class="col-lg-1">
+                                    <img class="img-fluid img-thumbnail" src="assets/img/wireless-razer-viper-v3-pro-blac.png" alt="Viper-V3">
+                                </td>
+                                <td><a href="show_mouse3.html">Viper-V3</a></td>
+                                <td class="text-center">Мышка</td>
+                                <td class="text-center"><span class="badge bg-primary">8.5</span></td>
+                            </tr>
+                            <tr>
+                                <td class="col-lg-1">
+                                    <img class="img-fluid img-thumbnail" src="assets/img/WOOTING 60HE.png" alt="WOOTING 60HE">
+                                </td>
+                                <td><a href="show_keyboard4.html">WOOTING 60HE</a></td>
+                                <td class="text-center">Клавиатура</td>
+                                <td class="text-center"><span class="badge bg-primary">8.3</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0"><a href="index.html" class="text-white">MiceBase</a></p>
+    </div>
+</footer>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

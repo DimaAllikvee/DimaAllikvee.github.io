@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Device Ratings</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Style -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index_en.html">MiceBase</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index_en.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mouses_en.html">Mice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="keyboards_en.html">Keyboards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="rating_devices_en.html">Device Ratings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact_en.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Русский</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="wrapper">
+    <div class="container">
+        <div class="row">
+            <!-- Основной контент -->
+            <section class="col-lg-9 order-lg-2">
+                <h1>Device Ratings</h1>
+                <hr>
+                
+                <!-- Таблица рейтингов -->
+                <section>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-center">Device</th>
+                                <th class="text-center">Type</th>
+                                <th class="text-center">Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-lg-1 col-md-1 col-xs-2">
+                                    <img class="img-thumbnail" src="assets/img/1-za13-dw-top.png" alt="ZA-13-DW">
+                                </td>
+                                <td class="align-middle"><a href="show_mouse1_en.html">ZA-13-DW</a></td>
+                                <td class="text-center align-middle">Mouse</td>
+                                <td class="text-center align-middle"><span class="badge bg-primary">8.9</span></td>
+                            </tr>
+                            <tr>
+                                <td class="col-lg-1 col-md-1 col-xs-2">
+                                    <img class="img-thumbnail" src="assets/img/DPP 87 Ink.png" alt="DPP 87 Ink">
+                                </td>
+                                <td class="align-middle"><a href="show_keyboard2_en.html">DPP 87 Ink</a></td>
+                                <td class="text-center align-middle">Keyboard</td>
+                                <td class="text-center align-middle"><span class="badge bg-primary">8.7</span></td>
+                            </tr>
+                            <tr>
+                                <td class="col-lg-1 col-md-1 col-xs-2">
+                                    <img class="img-thumbnail" src="assets/img/wireless-razer-viper-v3-pro-blac.png" alt="Viper-V3">
+                                </td>
+                                <td class="align-middle"><a href="show_mouse3_en.html">Viper-V3</a></td>
+                                <td class="text-center align-middle">Mouse</td>
+                                <td class="text-center align-middle"><span class="badge bg-primary">8.5</span></td>
+                            </tr>
+                            <tr>
+                                <td class="col-lg-1 col-md-1 col-xs-2">
+                                    <img class="img-thumbnail" src="assets/img/WOOTING 60HE.png" alt="WOOTING 60HE">
+                                </td>
+                                <td class="align-middle"><a href="show_keyboard4_en.html">WOOTING 60HE</a></td>
+                                <td class="text-center align-middle">Keyboard</td>
+                                <td class="text-center align-middle"><span class="badge bg-primary">8.3</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+
+            <!-- Сайдбар -->
+            <aside class="col-lg-3 order-lg-1">
+                <!-- Поиск -->
+                <div class="card mb-4">
+                    <div class="card-header">Search</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Your query">
+                                <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Вход -->
+                <div class="card mb-4">
+                    <div class="card-header">Login</div>
+                    <div class="card-body">
+                        <form>
+                            <input type="text" class="form-control mb-2" placeholder="Login">
+                            <input type="password" class="form-control mb-2" placeholder="Password">
+                            <button type="submit" class="btn btn-warning w-100">Login</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Новости -->
+                <div class="card mb-4">
+                    <div class="card-header">News</div>
+                    <div class="card-body">
+                        <p>31.02.2017</p>
+                        <p>We launched a new service</p>
+                    </div>
+                </div>
+
+                <!-- Топовые устройства -->
+                <div class="card mb-4">
+                    <div class="card-header">Top Devices</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_mouse1_en.html">ZA-13-DW</a>
+                                <span class="badge bg-primary">8.9</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_keyboard2_en.html">DPP 87 Ink</a>
+                                <span class="badge bg-primary">8.7</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_mouse3_en.html">Viper-V3</a>
+                                <span class="badge bg-primary">8.5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="show_keyboard4_en.html">WOOTING 60HE</a>
+                                <span class="badge bg-primary">8.3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+        <a href="index_en.html" class="text-white">MiceBase</a>
+    </div>
+</footer>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
