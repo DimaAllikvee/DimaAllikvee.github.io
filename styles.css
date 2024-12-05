@@ -171,3 +171,41 @@ button {
     transition: 100ms;
   }
   
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Скрываем элемент */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Анимация появления */
+    animation-delay: 0.2s; /* Задержка */
+}
+
+
+
+header h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem; /* Размер текста */
+  font-weight: bold;
+  color: transparent; /* Убираем цвет текста */
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  background-size: 200%; /* Увеличиваем размер градиента */
+  background-clip: text; /* Применяем фон только к тексту */
+  -webkit-background-clip: text; /* Для поддержки в Webkit-браузерах */
+  transition: background-position 0.5s ease; /* Плавность движения */
+}
+
+header h1:hover {
+  background-position: 100%; /* Двигаем градиент вправо при наведении */
+}
+
+
+
