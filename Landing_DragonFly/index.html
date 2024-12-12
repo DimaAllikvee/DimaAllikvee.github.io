@@ -17,10 +17,19 @@
 <body>
     <main>
         <section class="promo">
-            <div class="language-switcher">
-                <button onclick="translatePage('en')">English</button>
-                <button onclick="translatePage('ru')">Русский</button>
+            
+            <div class="language-switcher-container">
+                <!-- Hamburger icon (for smaller screens) -->
+                <button class="language-switcher-toggle" onclick="toggleLanguageSwitcher()">&#9776;</button>
+                
+                <!-- Language buttons (hidden on small screens) -->
+                <div class="language-switcher">
+                    <button onclick="translatePage('en')">English</button>
+                    <button onclick="translatePage('ru')">Русский</button>
+                </div>
             </div>
+            
+            
 
             <div class="container">
                 <h1 data-translate="promoTitle" class="promo__title">VGN Dragonfly F1</h1>

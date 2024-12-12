@@ -1,4 +1,4 @@
-// Объект с переводами
+// Object with translations
 const translations = {
           en: {
               promoTitle: "VGN Dragonfly F1",
@@ -16,7 +16,7 @@ const translations = {
               faq: "FAQ",
               faqQuestion1: "What makes the Dragonfly F1 unique?",
               faqQuestion2: "What are the key features of the Dragonfly F1?",
-              faqAnswer2: "Yes, the Dragonfly F1 features seamless wireless connectivity for a hassle-free experience. It also includes a wired option for maximum reliabilit",
+              faqAnswer2: "Yes, the Dragonfly F1 features seamless wireless connectivity for a hassle-free experience. It also includes a wired option for maximum reliability.",
               faqAnswer1: "The Dragonfly F1 is designed with lightweight portability, precision tracking, and customizable features to deliver unmatched performance for both gaming and professional use.",
               aboutUsText: "VGN is a leading provider of high-performance gaming peripherals, offering a wide range of products designed to enhance your gaming experience. Our mission is to deliver innovative solutions that empower gamers to reach their full potential.",
           },
@@ -38,14 +38,12 @@ const translations = {
               faqQuestion2: "Каковы ключевые особенности Dragonfly F1?",
               faqAnswer2: "Dragonfly F1 реализовано беспроводное подключение, что обеспечивает удобство работы. Кроме того, в комплект входит проводной вариант для максимальной надежности.",
               faqAnswer1: "Dragonfly F1 разработан с учетом легкости, точного отслеживания и настраиваемых функций, обеспечивающих непревзойденную производительность как для игр, так и для профессионального использования.",
-                    aboutUsText: "VGN - ведущий поставщик высокопроизводительных игровых периферийных устройств, предлагающий широкий ассортимент продуктов, разработанных для улучшения вашего игрового опыта. Наша миссия - предоставить инновационные решения, которые позволят геймерам раскры.",
-          },
+              aboutUsText: "VGN - ведущий поставщик высокопроизводительных игровых периферийных устройств, предлагающий широкий ассортимент продуктов, разработанных для улучшения вашего игрового опыта. Наша миссия - предоставить инновационные решения, которые позволят геймерам раскрыть свой потенциал.",
+          }
       };
       
-      
-      
-      // Функция для перевода страницы
-      function translatePage(language) {
+      // Function to translate page based on selected language
+function translatePage(language) {
           const elements = document.querySelectorAll("[data-translate]");
           elements.forEach((el) => {
               const key = el.getAttribute("data-translate");
@@ -53,12 +51,53 @@ const translations = {
                   el.textContent = translations[language][key];
               }
           });
-          localStorage.setItem("language", language); // Сохранение выбранного языка
+          localStorage.setItem("language", language); // Save selected language
       }
       
-      // Установка языка по умолчанию при загрузке страницы
+      // Set default language when the page is loaded
       document.addEventListener("DOMContentLoaded", () => {
-          const savedLanguage = localStorage.getItem("language") || "en"; // Язык по умолчанию: английский
+          const savedLanguage = localStorage.getItem("language") || "en"; // Default to English
           translatePage(savedLanguage);
       });
+      
+      // Toggle visibility of language switcher on small screens
+      function toggleLanguageSwitcher() {
+          const languageSwitcher = document.querySelector('.language-switcher');
+          const toggleButton = document.querySelector('.language-switcher-toggle');
+          
+          // Toggle visibility of language switcher
+          languageSwitcher.classList.toggle('active');
+          
+          // Toggle the cross icon
+          toggleButton.classList.toggle('active');
+          
+          // Show/hide language switcher
+          if (languageSwitcher.classList.contains('active')) {
+              languageSwitcher.style.display = 'flex';
+          } else {
+              languageSwitcher.style.display = 'none';
+          }
+      }
+      
+      // Function to handle screen resizing and adjust language switcher visibility
+      function handleResize() {
+          const languageSwitcher = document.querySelector('.language-switcher');
+          const toggleButton = document.querySelector('.language-switcher-toggle');
+          
+          if (window.innerWidth >= 768) {
+              // If the screen is large enough, show the language buttons and hide the toggle button
+              languageSwitcher.style.display = 'flex';
+              toggleButton.style.display = 'none';
+          } else {
+              // If the screen is smaller, show the toggle button and hide the language buttons
+              languageSwitcher.style.display = 'none';
+              toggleButton.style.display = 'block';
+          }
+      }
+      
+      // Listen for window resize events to adjust the language switcher visibility
+      window.addEventListener('resize', handleResize);
+      
+      // Call handleResize when the page loads to set initial visibility based on screen size
+      handleResize();
       
