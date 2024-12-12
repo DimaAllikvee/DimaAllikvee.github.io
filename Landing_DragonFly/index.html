@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website for VGN Dragonfly F1">
     <meta name="author" content="Awesome student">
-    <title>VGN Dragonfly F1</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title data-translate="pageTitle">VGN Dragonfly F1</title>
+    <link rel="icon" type="image/x-icon" href="vgn.jpg">
     <link rel="stylesheet" href="css/modern-normalize.min.css">
     <link 
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <main>
         <section class="promo">
+            <div class="language-switcher">
+                <button onclick="translatePage('en')">English</button>
+                <button onclick="translatePage('ru')">Русский</button>
+            </div>
+
             <div class="container">
-                <h1 class="promo__title">VGN Dragonfly F1</h1>
-                <h2 class="promo__subtitle">Experience precision and performance</h2>
-                <a href="#features" class="btn">Learn More</a>
+                <h1 data-translate="promoTitle" class="promo__title">VGN Dragonfly F1</h1>
+                <h2 data-translate="promoSubtitle" class="promo__subtitle">Experience precision and performance</h2>
+                <a href="#features" class="btn" data-translate="learnMore">Learn More</a>
                 <div class="promo__address">
-                    <address>
+                    <address data-translate="location">
                         Location: Everton Park, Block 2, Singapore 081002
                     </address>
-                    <a href="tel:+6596994725">+6596994725</a>
+                    <a href="tel:+6596994725" data-translate="phone">+6596994725</a>
                 </div>
             </div>
-            <ul class="keywords">
+
+            <ul class="keywords" data-translate="keywords">
                 <li>Ergonomic</li>
                 <li>Precision</li>
                 <li>Lightweight</li>
@@ -39,25 +46,26 @@
                 <li>Stylish</li>
             </ul>
         </section>
+
         <section id="features" class="about">
             <div class="container">
-                <h2 class="about__title">Why Choose the Dragonfly F1?</h2>
-                <p class="about__text">
+                <h2 data-translate="featuresTitle" class="about__title">Why Choose the Dragonfly F1?</h2>
+                <p data-translate="featuresText" class="about__text">
                     The VGN Dragonfly F1 offers unmatched precision, lightweight design, and advanced features 
                     for gaming and productivity. Its ergonomic build ensures comfort during long hours of use, 
                     while its cutting-edge technology provides exceptional performance in any scenario.
                 </p>
                 <div class="services">
                     <div class="services__items">
-                        <div class="services__item-subtitle">Key Features</div>
+                        <div data-translate="keyFeatures" class="services__item-subtitle">Key Features</div>
                         <ul>
-                            <li>Ultra-lightweight design for effortless portability</li>
-                            <li>High-performance optical sensor for precision tracking</li>
-                            <li>Customizable buttons and RGB lighting</li>
-                            <li>Durable build quality with premium materials</li>
+                            <li data-translate="feature1">Ultra-lightweight design for effortless portability</li>
+                            <li data-translate="feature2">High-performance optical sensor for precision tracking</li>
+                            <li data-translate="feature3">Customizable buttons and RGB lighting</li>
+                            <li data-translate="feature4">Durable build quality with premium materials</li>
                         </ul>
                     </div>
-                    <p class="services__text">
+                    <p data-translate="servicesText" class="services__text">
                         With a focus on innovation and quality, the Dragonfly F1 is crafted to meet the demands of gamers 
                         and professionals alike. Discover the difference with advanced ergonomics, 
                         industry-leading performance, and stunning aesthetics.
@@ -65,9 +73,10 @@
                 </div>
             </div>
         </section>
+
         <section class="works">
             <div class="container">
-                <h2 id="portfolio" class="title"><span>Gallery</span></h2>
+                <h2 id="portfolio" data-translate="galleryTitle" class="title"><span>Gallery</span></h2>
                 <div class="works__grid">
                     <img src="img/works/dragonfly-1.jpg" alt="Dragonfly top view">
                     <img src="img/works/dragonfly-2.jpg" alt="Dragonfly side view">
@@ -77,22 +86,23 @@
                 </div>
             </div>
         </section>
+
         <section class="inspiration">
             <div class="container">
-                <h2 class="title"><span>In Action</span></h2>
+                <h2 data-translate="inspirationTitle" class="title"><span>In Action</span></h2>
                 <div class="inspiration__grid">
                     <img src="img/inspiration/dragonfly-setup.jpg" alt="Gaming setup">
                     <img src="img/inspiration/dragonfly-workspace.jpg" alt="Workspace setup">
                     <img src="img/inspiration/dragonfly-portable.jpg" alt="Portable design">
-                    
                     <img src="img/inspiration/dragonfly-precision.jpg" alt="Precision">
                     <img id="sky" src="img/inspiration/dragonfly-wireless.jpg" alt="Wireless connectivity">
                 </div>
             </div>
         </section>
+
         <section class="customers">
             <div class="container">
-                <h2 class="title"><span>Blog posts</span></h2>
+                <h2 data-translate="blogPostsTitle" class="title"><span>Blog posts</span></h2>
                 <div class="customers__wrapper">
                     <img src="logo/logo-pro-gaming.jpg" alt="Pro Gaming">
                     <img src="logo/logo-tech-enthusiasts.jpg" alt="Tech Enthusiasts">
@@ -100,6 +110,45 @@
                 </div>
             </div>
         </section>
+
+        <section class="about-us">
+            <div class="container about-us__container">
+                <div class="about-us__image">
+                    <img src="img/inspiration/20230810143920.jpg" alt="VGN Building">
+                </div>
+                <div class="about-us__content">
+                    <h2 data-translate="aboutUsTitle" class="title"><span>About us</span></h2>
+                    <p data-translate="aboutUsText" class="about-us__text">
+                        Founded in 2022, a new consumer brand targeting the emerging ecosystem group. 
+                        With a focus on PC gaming enthusiasts, VGN creates the ultimate customized 
+                        gaming experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 data-translate="faqTitle" class="title"><span>FAQ</span></h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <h3 data-translate="faqQuestion1" class="faq__question">What makes the Dragonfly F1 unique?</h3>
+                        <p data-translate="faqAnswer1" class="faq__answer">
+                            The Dragonfly F1 is designed with lightweight portability, precision tracking, and customizable 
+                            features to deliver unmatched performance for both gaming and professional use.
+                        </p>
+                    </div>
+                    <div class="faq__item">
+                        <h3 data-translate="faqQuestion2" class="faq__question">Does the Dragonfly F1 support wireless connectivity?</h3>
+                        <p data-translate="faqAnswer2" class="faq__answer">
+                            Yes, the Dragonfly F1 features seamless wireless connectivity for a hassle-free experience. 
+                            It also includes a wired option for maximum reliability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer class="footer">
             <ul class="footer__social">
                 <li>
@@ -118,10 +167,10 @@
                     </a>
                 </li>
             </ul>
-            <address class="footer__addr">
+            <address data-translate="footerAddress" class="footer__addr">
                 Everton Park, Block 2, Singapore 081002
             </address>
-            <a class="footer__tel" href="tel:+6596994725">+6596994725</a>
+            <a data-translate="footerPhone" class="footer__tel" href="tel:+6596994725">+6596994725</a>
         </footer>
     </main>
 </body>
