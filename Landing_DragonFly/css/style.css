@@ -557,22 +557,26 @@ html {
       
       .inspiration__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-responsive grid */
-        gap: 20px; 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Автоматически подгоняет количество столбцов */
+        grid-auto-rows: 300px; /* Устанавливает фиксированную высоту строк */
+        gap: 20px; /* Расстояние между элементами */
         margin-top: 50px;
     }
     
     .inspiration__grid img {
-        width: 100%;
-        border-radius: 10px; 
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%; /* Увеличивает картинку до ширины контейнера */
+        height: 100%; /* Растягивает картинку на всю высоту контейнера */
+        object-fit: cover; /* Сохраняет пропорции изображения, обрезая его по краям */
+        border-radius: 10px; /* Скругляет края */
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Добавляет тень */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный эффект при наведении */
     }
     
     .inspiration__grid img:hover {
-        transform: scale(1.05); 
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); 
+        transform: scale(1.05); /* Увеличивает элемент при наведении */
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Усиливает тень при наведении */
     }
+    
 
     .img5d {
         width: 100%; /* Ширина блока */
