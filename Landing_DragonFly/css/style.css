@@ -995,4 +995,30 @@ html {
 
 
 
+
+/*шрифты */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Outfit', sans-serif; /* Шрифт по умолчанию для английского */
+}
+
+html[lang="ru"] body {
+    font-family: 'Playfair Display', serif; /* Шрифт для русского языка */
+}
+
+
+
       
