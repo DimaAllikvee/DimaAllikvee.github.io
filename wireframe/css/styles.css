@@ -1,0 +1,795 @@
+
+:root {
+    --primary-color: #e60012;
+    --secondary-color: #222;
+    --background-color: #1e1e1e;
+    --text-color: #fff;
+    --muted-text-color: #888;
+    --highlight-color: rgba(230, 0, 18, 0.6);
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding: 10px 20px;
+    background-color: #111;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.tagline {
+    margin-left: 15px;
+    font-size: 14px;
+    color: var(--muted-text-color);
+    white-space: nowrap;
+    text-shadow: 0 0 10px var(--highlight-color);
+}
+
+.login {
+    padding: 15px 25px;
+    border: unset;
+    color: #ffffff;
+    z-index: 1;
+    background: #2d2828;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+
+    background-color: #d31717a8;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    transition: all 250ms;
+}
+
+.login:hover {
+    color: #fefefe;
+}
+
+.login:hover::before {
+    width: 100%;
+}
+
+
+
+.hero {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--secondary-color);
+}
+
+.hero-image {
+    width: 100%; /* Ширина 100% контейнера */
+    max-width: 2000px; /* Максимальная ширина */
+    height: 400px; /* Задаем фиксированную высоту */
+    object-fit: cover; /* Устанавливаем, как изображение вписывается в заданную высоту */
+    
+    border: px solid var(--highlight-color);
+    
+    margin: 0 auto;
+}
+
+
+
+
+/* Video Section */
+.video {
+    width: 100%; /* Растягиваем секцию на всю ширину экрана */
+    max-width: 100vw; /* Ограничиваем ширину до окна браузера */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    overflow: hidden; /* Убираем прокрутку, если есть */
+}
+
+.video video {
+    width: 100%; /* Растягиваем на всю ширину */
+    height: 500px; /* Устанавливаем фиксированную высоту */
+    object-fit: cover; /* Обрезает содержимое, чтобы заполнить блок */
+    border: none; /* Убираем рамки */
+}
+
+
+
+
+
+/* Benefits Section */
+.benefits {
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 40px;
+    margin-right: 20px; /* Добавление внешнего отступа для всей секции */
+}
+
+.benefit {
+    text-align: left;
+    flex-basis: 30%; /* Устанавливаем ширину каждого блока */
+    padding: 30px;
+    background-color: #333;
+    margin-right: 20px; /* Добавление отступа справа */
+}
+
+
+.benefit:nth-child(2) {
+    margin: 0 auto; /* Центрируем второй блок */
+}
+
+
+.benefit:hover {
+    transform: translateY(-10px);
+}
+
+.benefit h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* Product Details Section */
+.product-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #181818;
+    color: var(--text-color);
+    gap: 20px;
+}
+
+.product-details img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-details .details {
+    max-width: 500px;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-details li {
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; /* Расстояние между блоками */
+    padding: 40px 40px; /* Внутренние отступы */
+    margin-right: 20px;
+}
+
+.feature {
+    text-align: left; /* Центрирование текста */
+    flex-basis: 30%; /* Ширина каждого блока */
+    padding: 30px; /* Внутренние отступы */
+    background-color: #333; /* Фон блока */
+    margin-right: 20px;
+    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Тень блока */
+    transition: transform 0.3s; /* Анимация при наведении */
+}
+
+.feature:hover {
+    transform: translateY(-10px); /* Анимация подъема при наведении */
+}
+
+.feature h3 {
+    font-size: 20px; /* Размер заголовка */
+    margin-bottom: 10px;
+    color: #fff; /* Цвет текста */
+}
+
+.feature p {
+    font-size: 16px; /* Размер текста */
+    color: #bbb; /* Цвет текста */
+    line-height: 1.5; /* Межстрочный интервал */
+}
+
+
+
+/* Signup Section */
+.signup {
+    position: relative;
+    padding: 40px 10px;
+    width: calc(95% - 40px); /* Ширина с учетом отступов */
+    background-color: #222; /* Фон секции */
+    color: var(--text-color);
+    padding-bottom: 40px;
+    margin: 0 auto;
+    margin-left: 40px; 
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+.signup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: var(--text-color);
+    
+    padding-bottom: 5px; 
+}
+
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 20px; /* Расстояние между полем и кнопкой */
+}
+
+.signup input {
+    position: absolute;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 18px;
+    
+    border-radius: 5px;
+    width: 50%; 
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.signup button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);   
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-end; /* Кнопка выровнена по правому краю */
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 95px; /* Отступ от правого края экрана */
+    width: 30%; /* Кнопка занимает всю ширину родителя */
+}
+
+.signup button:hover {
+    background-color: #c50010;  
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.footer-menu a {
+    color: var(--muted-text-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-menu a:hover {
+    color: var(--primary-color);
+}
+
+.social-media a img {
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Выравниваем по левому краю */
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.user-icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 200px; /* Отступ слева */
+    margin-right: 20px; /* Отступ справа */
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-text {
+    font-size: 20px;
+    color: var(--text-color);
+    text-align: left;
+    display: inline; /* Текст в строку */
+    white-space: nowrap; /* Запрещает перенос текста */
+    margin-left: 300px;
+    max-width: 700px;
+    line-height: 1.8;
+    margin-right: 90px; /* Отступ справа */
+}
+
+
+/* Navigation Arrows */
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%; /* Центрирование стрелок по вертикали */
+    transform: translateY(-50%); /* Смещение для идеального центрирования */
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 1; /* Устанавливаем поверх всего */
+}
+
+button.prev {
+    left: 10px; /* Расположение слева */
+}
+
+button.next {
+    right: 10px; /* Расположение справа */
+}
+
+button.prev:hover,
+button.next:hover {
+    color: #c50010; /* Цвет при наведении */
+}
+
+
+
+
+
+
+/* Benefits Section (Desktop) */
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+}
+
+.benefit {
+    flex: 1;
+    background-color: #333;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefit h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 16px;
+    color: #bbb;
+}
+
+/* Benefits Slider (Mobile) */
+.benefits-slider {
+    display: none; /* Скрываем слайдер по умолчанию */
+}
+
+.slider-container {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-top: 20px;
+    
+}
+
+.slider-item {
+    flex: 0 0 100%; /* Каждая карточка занимает весь экран */
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.slider-arrows {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 60%; /* Опускаем стрелки чуть пониже */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+button.prev-benefit, button.next-benefit {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 20px; /* Уменьшение размера стрелок */
+    cursor: pointer;
+    pointer-events: all;
+}
+
+button.prev-benefit {
+    position: absolute;
+    left: 10px;
+}
+
+button.next-benefit {
+    position: absolute;
+    right: 1px; /* Двигаем правую стрелку правее */
+}
+
+button.prev-benefit:hover, button.next-benefit:hover {
+    color: #c50010;
+}
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .benefits {
+        display: none; /* Скрываем секцию Benefits на мобильных */
+    }
+    .benefits-slider {
+        display: block; /* Показываем слайдер только на мобильных */
+    }
+}
+
+
+
+
+
+
+/* Media Query для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Уменьшение общего размера текста */
+        margin: 0; /* Убираем общий отступ у body */
+        padding: 0;
+    }
+
+    header {
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        
+        
+    }
+
+    .logo {
+        flex: 1; 
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .tagline {
+        font-size: 12px; 
+        margin-left: 10px; /
+    }
+
+    .login {
+        flex: none; /* Кнопка не растягивается */
+        margin-left: auto; /* Выровнена справа */
+    }
+
+    .hero {
+        padding: 0; /* Убираем внутренние отступы секции hero */
+        margin: 0; /* Убираем внешние отступы секции hero */
+    }
+
+    .hero-image {
+        
+        height: 200px; /* Высота адаптируется пропорционально ширине */
+        margin: 0; /* Убираем отступы у изображения */
+        border-radius: 0; /* Убираем скругление углов */
+    }
+
+    .video {
+        width: 100%; /* Растягиваем секцию на всю ширину экрана */
+        max-width: 100vw; /* Ограничиваем ширину до окна браузера */
+        margin: 0; /* Убираем внешние отступы */
+        padding: 0; /* Убираем внутренние отступы */
+        overflow: hidden; /* Убираем прокрутку, если есть */
+    }
+    
+    .video video {
+        width: 100%; /* Растягиваем на всю ширину */
+        height: 200px; /* Устанавливаем фиксированную высоту */
+        object-fit: cover; /* Обрезает содержимое, чтобы заполнить блок */
+        border: none; /* Убираем рамки */
+    }
+
+ 
+
+    .benefit {
+        text-align: center; /* Выравнивание по центру */
+        padding: 20px;
+    }
+
+    .features {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px; /* Внутренние отступы */
+    }
+
+    @media (max-width: 768px) {
+        .features {
+            flex-direction: row; /* Выстраиваем блоки вертикально */
+            gap: 20px; /* Расстояние между блоками */
+            padding: 20px 10px; /* Отступы сверху/снизу 20px, слева/справа 10px */
+        }
+    
+        .feature {
+            margin-right: 10px;
+            margin-left: 20px; /* Добавляем отступ справа */
+        }
+    }
+
+    .feature {
+        text-align: center; /* Центрирование блоков */
+        padding: 20px;
+       
+    }
+
+    .testimonials {
+        padding: 20px;
+        
+    }
+
+    .testimonial-container {
+        display: flex;
+        align-items: flex-start; /* Выровнять элементы по верхнему краю */
+        gap: 0px; /* Промежуток между иконкой и текстом */
+        padding: 20px; /* Отступы вокруг контейнера */
+        padding-right: 40px;
+    }
+
+    .user-icon {
+        width: 100px; /* Уменьшение размера иконки */
+        height: 100px;
+        margin-left: 0;
+        margin-bottom: 20px;
+         
+        
+        
+    }
+
+    .testimonial-text {
+        font-size: 15px;
+        
+        display: inline; /* Текст в строку */
+        white-space: nowrap; /* Запрещает перенос текста */
+        color: var(--text-color);
+        line-height: 1; /* Межстрочный интервал */
+        margin-top: 0; /* Убираем лишние отступы сверху */
+        padding-top: 25px;
+        padding-left: 50px;
+    }
+    
+
+    /* Signup Section */
+.signup {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
+    padding: 20px; /* Отступы внутри секции */
+    background-color: #222; /* Фон секции */
+    color: var(--text-color);
+    max-width: 400px; /* Ограничиваем ширину секции */
+    margin: 0 auto; /* Центрируем секцию на экране */
+    margin-bottom: 10px;
+}
+
+.signup h2 {
+    font-size: 24px;
+    margin-left: 75px;
+    margin-bottom: 15px; /* Расстояние между заголовком и полем ввода */
+    color: var(--text-color);
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column; /* Элементы формы располагаются вертикально */
+    gap: 10px; /* Расстояние между полем ввода и кнопкой */
+    margin-left: 40px;
+    width: 100%; /* Форма занимает всю ширину родителя */
+}
+
+.signup input {
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+    width: 68%; /* Поле ввода растягивается по ширине */
+    border: 1px solid #333; /* Граница */
+    border-radius: 5px; /* Скруглённые углы */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.signup button {
+    
+    padding: 10px;
+    margin-right: 80px;
+    margin-top: 60px;
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+    width: 80%; /* Поле ввода растягивается по ширине */
+    border: 1px solid #333; /* Граница */
+    border-radius: 5px; /* Скруглённые углы */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.signup button:hover {
+    background-color: #c50010; /* Темнее при наведении */
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Выравнивание по нижнему краю */
+    padding: 20px;
+    background-color: #111;
+}
+
+.footer-menu,
+.social-media {
+    display: flex;
+    align-items: flex-end; /* Выравнивание ссылок по нижнему краю */
+}
+
+.footer-menu a,
+.social-media a {
+    color: var(--muted-text-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-menu a:hover,
+.social-media a:hover {
+    color: var(--primary-color);
+}
+
+
+  
+    
+
+
+}
+
+
+
+@media (max-width: 1024px) {
+    .testimonials {
+        padding: 20px;
+    }
+
+    .testimonial-container {
+        position: relative; /* Для позиционирования стрелок */
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .user-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .testimonial-text {
+        font-size: 16px; /* Размер текста */
+        white-space: normal; /* Разрешает перенос текста на новую строку */
+        text-align: left; /* Текст выравнен по левому краю */
+        color: var(--text-color);
+        line-height: 1.5; /* Межстрочный интервал */
+        margin: 0;
+        padding: 10px; /* Отступы вокруг текста */
+        flex-grow: 1;
+    }
+
+    
+    button.prev,
+    button.next {
+        position: absolute;
+        top: 50%; /* Центрирование по вертикали */
+        transform: translateY(-50%); /* Смещение для идеального центрирования */
+        background-color: transparent;
+        border: none;
+        color: var(--primary-color);
+        font-size: 20px; /* Уменьшение размера стрелок */
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    button.prev {
+        left: -20px; /* Расположение левее края экрана */
+    }
+
+    button.next {
+        right: 10px; /* Расположение справа */
+    }
+
+    button.prev:hover,
+    button.next:hover {
+        color: #c50010; /* Цвет при наведении */
+    }
+
+}
+
+
