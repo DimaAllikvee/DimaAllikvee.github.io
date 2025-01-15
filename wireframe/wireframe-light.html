@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zowie ZA13-DW</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-light.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,8 +17,7 @@
         </div>
         <nav>
             <a href="#login" class="login">Log In</a>
-            <button id="theme-toggle" aria-label="Toggle Theme">Switch Theme</button>
-            
+            <button id="theme-toggle" aria-label="Toggle Theme" <a href="wireframe.html">Switch Theme</button>
         </nav>
         
     </header>
@@ -113,32 +112,29 @@
         </section>
 
         <section class="signup">
-            <h2>Sign Up / Get Started</h2>
-            <form id="emailForm">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit" id="open-popup">Submit</button>
-                <div id="error-message" class="error"></div>
-            </form>
-          </section>
+          <h2>Sign Up / Get Started</h2>
+          <form action="#" method="post">
+              <input type="email" name="email" placeholder="Enter your email" required>
+              <button type="submit" id="open-popup">Submit</button>
+          </form>
+        </section>
 
-          <!-- Модальное окно (popup) -->
+                  <!-- Модальное окно (popup) -->
 <div id="popup" class="modal">
-    <div class="modal-content">
-      <span class="close" id="close-popup">&times;</span>
-      <h2>Enter Your Details</h2>
-      <form id="popup-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-  
-        <label for="tel">Tel. number:</label>
-        <input type="tel" id="tel" name="tel" required>
-  
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
-  
-          
+          <div class="modal-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>Enter Your Details</h2>
+            <form id="popup-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+        
+              <label for="tel">Tel. number:</label>
+              <input type="tel" id="tel" name="tel" required>
+        
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
         
       
     </main>
@@ -159,7 +155,6 @@
 
     <script src="js/script.js"></script>
     <script src="js/benefits-slider.js"></script>
-    <script src="js/email-validation.js"></script>  
 
 </body>
 </html>
