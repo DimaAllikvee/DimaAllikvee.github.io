@@ -9,7 +9,7 @@
 }
     
     body {
-    font-family: 'Jost', sans-serif; /* Определяет шрифт текста. */
+    font-family: 'Montserrat', sans-serif; /* Определяет шрифт текста. */
     margin: 0; /* Задает внешние отступы вокруг элемента. */
     padding: 0; /* Задает внутренние отступы внутри элемента. */
     background-color: var(--background-color); /* Устанавливает цвет фона элемента. */
@@ -214,7 +214,7 @@
         flex-basis: 30%; /* Ширина каждого блока */
         padding: 30px; /* Внутренние отступы */
         background-color: #333; /* Фон блока */
-    margin-right: 20px; /* Описание этого свойства недоступно. */
+    margin-right: 30px; /* Описание этого свойства недоступно. */
         
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Тень блока */
         transition: transform 0.3s; /* Анимация при наведении */
@@ -590,7 +590,7 @@
             }
         
             .feature {
-    margin-right: 10px; /* Описание этого свойства недоступно. */
+    margin-right: -6px; /* Описание этого свойства недоступно. */
                 margin-left: 20px; /* Добавляем отступ справа */
             }
         }
@@ -925,5 +925,181 @@
     border-radius: 4px; /* Описание этого свойства недоступно. */
       }
       
-   
+   /* --- Карточки мышек --- */
+.mouse-cards {
+    display: flex;                  /* Размещаем карточки в ряд */
+    justify-content: center;        /* Центрируем их по горизонтали */
+    gap: 20px;                      /* Расстояние между карточками */
+    padding: 40px;                  /* Внутренние отступы сверху/снизу/слева/справа */
+    flex-wrap: wrap;               /* Чтобы карточки переносились на новую строку при узком экране */
+    background-color: #181818;      /* Цвет фона секции */
+}
+
+.mouse-cards h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: var(--text-color);
     
+}
+
+/* Стили для каждой карточки */
+.mouse-cards {
+    display: flex;            /* Размещаем карточки в ряд */
+    justify-content: center;  /* Центрируем их по горизонтали */
+    gap: 20px;                /* Расстояние между карточками */
+    padding: 40px;            /* Внутренние отступы */
+    flex-wrap: wrap;          /* По умолчанию разрешаем перенос на новую строку */
+    background-color: #181818;
+}
+
+.mouse-cards {
+    display: flex;               /* Размещаем карточки в ряд */
+    justify-content: center;     /* Центрируем их по горизонтали */
+    gap: 39px;
+    margin-right: 45px;                   /* Расстояние между карточками */
+    padding: 40px;               /* Внутренние отступы */
+    flex-wrap: wrap;             /* По умолчанию разрешаем перенос */
+    background-color: #1e1e1e
+}
+
+/* ----- Карточка ----- */
+.card {
+    background-color: #333;
+    flex: 1 1 250px;             /* Каждый блок тянется, минимальная ширина ~250px */
+    max-width: 800px;            /* Можно ограничить максимальную ширину карточки */
+    text-align: center;
+
+    
+    margin: 8px;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+/* ----- Контейнер для изображения ----- */
+.card-image-container {
+    margin: 0 auto;           /* Центрируем контейнер */
+    width: 30%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;         /* Скрываем «вылезающие» части при анимации */
+    margin-bottom: 15px;
+}
+
+/* Изображение внутри карточки */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: pulse 3s infinite ease-in-out; /* Добавляем цикличную анимацию */
+}
+
+/* Анимация увеличения и возврата к исходному размеру */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Исходный размер */
+    }
+    30% {
+        transform: scale(1.2); /* Увеличение */
+    }
+    100% {
+        transform: scale(1); /* Возврат к исходному размеру */
+    }
+}
+
+/* Текст описания */
+.card p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* --- Адаптация под мобильные устройства --- */
+@media (max-width: 768px) {
+    .mouse-cards {
+        flex-wrap: nowrap;         /* Запрещаем перенос */
+        justify-content: space-around; 
+        padding: 20px; 
+        margin-left: 18px;
+        margin-right: 12px;            /* Уменьшаем отступы */
+    }
+    .card {
+        max-width: 100%; /* Увеличиваем ширину карточки */
+        margin-right: 5px;
+    }
+
+    .card-image-container {
+        margin: 0 auto;           /* Центрируем контейнер */
+        height: 50px;
+        
+        position: relative;
+        overflow: hidden;         /* Скрываем «вылезающие» части при анимации */
+        margin-bottom: 15px;
+    }
+
+    .mouse-cards h2 {
+        display: none;
+    }
+}
+
+
+/* ----- Общая обёртка карусели ----- */
+.carousel {
+    position: relative;      /* Для возможной абсолютной позиции кнопок или индикаторов */
+    width: 100%;             /* Растягиваем на всю ширину контейнера */
+    max-width: 500px;        /* Можно задать максимальную ширину */
+    margin: 0 auto;          /* Центрируем слайдер на странице */
+    overflow: hidden;        /* Скрываем «лишние» части при прокрутке внутри */
+    
+  }
+  
+  /* ----- Контейнер со слайдами ----- */
+  .carousel-container {
+    display: flex;                     /* Ряды слайдов */
+    transition: transform 0.5s ease;   /* Плавная анимация при смене слайда */
+    will-change: transform;            /* Оптимизация рендеринга */
+  }
+  
+  /* ----- Каждый слайд ----- */
+  .carousel-slide {
+    flex: 0 0 100%;  /* Каждый слайд занимает 100% ширины видимой области */
+    position: relative;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: auto;     /* Автоматическая пропорция по высоте */
+    display: block;   /* Убираем возможные «пустые» пробелы */
+  }
+  
+  /* ----- Индикаторы-точки ----- */
+  .carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+ 
+  
+  .carousel-dots .dot.active {
+    background-color: #333;  /* Активная точка */
+  }
+  
+  /* ----- Адаптивность под мобильные устройства ----- */
+  @media (max-width: 768px) {
+    .carousel {
+      max-width: 80%;  /* На мобильных пусть тянется на всю ширину экрана */
+    }
+  
+    .carousel-dots .dot {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  
+  
