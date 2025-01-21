@@ -1103,3 +1103,286 @@
   }
   
   
+
+  
+  .about-company {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    padding: 40px;
+    background-color: var(--background-color);
+}
+
+/* Flex container for image and text */
+.about-container {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the max width */
+    gap: 40px; /* Space between the image and text */
+    margin-bottom: 40px; /* Space below the container */
+}
+
+/* Left Image Styling */
+.about-image img {
+    width: 100%;
+    max-width: 500px; /* Limit the image width */
+    height: auto; /* Maintain aspect ratio */
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for better focus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+}
+
+/* Right Text Block Styling */
+.about-box {
+    flex: 1;
+    max-width: 500px;
+    min-height: 600px; /* Минимальная высота */
+    background-color: rgb(59 52 52 / 80%); /* Полупрозрачный фон */
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+    backdrop-filter: blur(10px); /* Размытие фона позади блока */
+}
+
+.about-box:hover {
+    transform: translateY(-10px); /* Поднимаем блок при наведении */
+    background-color: rgba(107, 58, 58, 0.9); /* Немного затемняем при наведении */
+    backdrop-filter: blur(12px); /* Увеличиваем размытие на ховер */
+}
+
+.about-box h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 170px; /* Добавляем небольшой отступ */
+    text-align: center;
+}
+
+.about-box p {
+    font-size: 18px;
+    color: #ebeaea;
+    line-height: 1.6;
+    margin: 0; /* Убираем нижние отступы, если они не нужны */
+}
+
+
+
+/* Below Video Section */
+.about-video video {
+    width: 100%;
+    max-width: 1200px; /* Increase the maximum width of the video */
+    height: 550px; /* Maintain aspect ratio */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Enhance shadow for emphasis */
+    margin-top: 30px; /* Add space above the video */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-video video:hover {
+    transform: scale(1.02); /* Slightly enlarge the video on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Enhance shadow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-video video {
+        max-width: 100%; /* Ensure the video fits the screen width */
+        margin-top: 20px; /* Reduce the margin on smaller screens */
+    }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .about-image img {
+        max-width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .about-box {
+        max-width: 100%; /* Full width for the text box */
+    }
+}
+
+/* Add animation on page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-container {
+    animation: fadeIn 0.8s ease-in-out; /* Apply fade-in animation */
+}
+
+.about-video {
+    animation: fadeIn 1.2s ease-in-out; /* Slight delay for the video animation */
+}
+
+/* Shopping Cart Section */
+.shopping-cart {
+    padding: 110px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shopping-cart h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.item-details p {
+    font-size: 16px;
+    color: var(--muted-text-color);
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity input {
+    width: 60px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid var(--muted-text-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button.remove-item {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.remove-item:hover {
+    background-color: #c50010;
+}
+
+.cart-summary {
+    margin-top: 30px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.cart-summary h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.cart-summary p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+button.checkout {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button.checkout:hover {
+    background-color: #c50010;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+    .cart-items {
+        gap: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .quantity input {
+        width: 50px;
+    }
+
+    .cart-summary {
+        padding: 15px;
+    }
+
+    button.checkout {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
