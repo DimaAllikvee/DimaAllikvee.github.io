@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0,
+                 maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TourSwitzerland</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./js/script.js" defer></script>
+
+</head>
+<body>
+<header class="header">
+    <a class="header-logo" href="/">
+        <img
+                src="./images/logo.png"
+                alt="Switzerland Logo"
+                class="header-logo-image"
+                width="142" height="80" loading="lazy"
+        />
+    </a>
+    <nav class="header-menu">
+        <ul class="header-menu-list">
+            <li class="header-menu-item">
+                <a href="/" class="header-menu-link">About us</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="/" class="header-menu-link">Itinerary</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="/" class="header-menu-link">Testimonials</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="/" class="header-menu-link">Contacts</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header-actions">
+        <button class="header-language-button button" type="button">
+            ENG/EST
+        </button>
+    </div>
+</header>
+
+<main class="content">
+    <!-- Баннер -->
+    <section class="banner">
+        <!-- Верхняя часть баннера (текст, заголовок, линия) -->
+        <div class="banner-body">
+            <div class="banner-info">
+                YOUR PERFECT JOURNEY TO
+            </div>
+            <h3 class="banner-title">Switzerland</h3>
+        </div>
+
+        <!-- Pagination (тонкая линия под заголовком, если нужно) -->
+        <div class="banner-pagination">
+            <ul class="banner-pagination-list">
+                <li class="banner-pagination-item"></li>
+            </ul>
+        </div>
+
+        <!-- Нижняя часть: слева 4 фичи, справа блок "Next Trip" -->
+        <div class="banner-lower">
+            <!-- Блок фич (4 шт) -->
+            <div class="banner-features">
+                <!-- Первая карточка (со скруглённым верхним левым углом) -->
+                <article class="banner-feature">
+                    <img
+                            class="banner-feature-image"
+                            src="./images/banner1.png"
+                            alt="20+ Years"
+                    />
+                    <h4 class="banner-feature-title">
+                        20+ Years of<br>Experience
+                    </h4>
+                </article>
+
+                <!-- Вторая карточка -->
+                <article class="banner-feature">
+                    <img
+                            class="banner-feature-image"
+                            src="./images/banner2.png"
+                            alt="Professional Tour Guides"
+                    />
+                    <h4 class="banner-feature-title">
+                        Professional<br>Tour Guides
+                    </h4>
+                </article>
+
+                <!-- Третья карточка -->
+                <article class="banner-feature">
+                    <img
+                            class="banner-feature-image"
+                            src="./images/banner3.png"
+                            alt="Free Cancellation"
+                    />
+                    <h4 class="banner-feature-title">
+                        Free<br>Cancellation
+                    </h4>
+                </article>
+
+                <!-- Четвёртая карточка -->
+                <article class="banner-feature">
+                    <img
+                            class="banner-feature-image"
+                            src="./images/banner4.png"
+                            alt="Health & Safety"
+                    />
+                    <h4 class="banner-feature-title">
+                        Health<br>&amp; Safety
+                    </h4>
+                </article>
+            </div>
+
+
+
+            <!-- Блок "Next Trip" -->
+            <div class="banner-trip">
+                <img
+                        class="banner-trip-image"
+                        src="images/trip-banner3.png"
+                        alt="Next Trip"
+                />
+
+                <div class="banner-trip-content">
+                    <h2 class="trip-title">Next Trip to Switzerland</h2>
+                    <h3 class="trip-price">$2300 | 17 NOV. - 22 NOV.</h3>
+                    <p class="trip-description">
+                        10 days of travel and 5 unique places in Norway are waiting for us ...
+                    </p>
+                    <div class="read-more-wrap">
+                        <span class="trip-read-more">Read more</span>
+                        <img class="arrow" src="./icons/Arrow.svg" alt="Arrow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="about-us-container">
+            <!-- Левая часть (заголовок) -->
+            <div class="about-us-left">
+                <h2 class="about-us-heading">ABOUT US</h2>
+                <h3 class="about-us-title">
+                    Expertly crafted tours to Switzerland.
+                    <span class="highlight">10 days</span> of admiring nordic cities.
+                    fjords, and waterfalls.
+                </h3>
+            </div>
+
+            <!-- Правая часть (текст + полоса) -->
+            <div class="about-us-right">
+                <p>
+                    We offer unforgettable guided tours in Switzerland –
+                    a country of breathtaking Alpine landscapes, charming cities,
+                    and rich history. Travel across the heart of Europe, from Zurich to Geneva
+                </p>
+                <p>
+                    Our program is carefully designed, with groups of no more than
+                    10 people plus an English-speaking guide.
+                </p>
+                <hr class="about-us-divider" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Cекция с фоном и тремя шагами -->
+    <section class="steps-section">
+        <!-- Можно добавить слой-обёртку для тёмной/светлой плашки поверх фона, если нужно -->
+        <div class="steps-container">
+
+            <!-- Карточка 01 -->
+            <article class="step-card step-1">
+                <div class="step-number">01</div>
+                <h4 class="step-title">Contact us</h4>
+                <p class="step-text">
+                    Some tour conditions may be changed according to the season.
+                    To learn more about the program, please contact us.
+                </p>
+            </article>
+
+            <!-- Карточка 02 -->
+            <article class="step-card step-2">
+                <div class="step-number">02</div>
+                <h4 class="step-title">Pick a date</h4>
+                <p class="step-text">
+                    We conduct tours all year round, almost every week,
+                    but the most comfortable weather for sightseeing is in summer.
+                </p>
+            </article>
+
+            <!-- Карточка 03 -->
+            <article class="step-card step-3">
+                <div class="step-number">03</div>
+                <h4 class="step-title">Start your journey</h4>
+                <p class="step-text">
+                    If necessary, we help you apply for a visa to Switzerland,
+                    as well as advise what things you should take with you.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="tour-itinerary">
+        <div class="tour-itinerary-container">
+
+            <!-- Левая часть: карта Швейцарии -->
+            <div class="tour-itinerary-left">
+                <!-- Замените switzerland-map.png на реальный путь/название изображения -->
+                <img
+                        src="./images/switzerland-map.png"
+                        alt="Switzerland Map"
+                        class="tour-itinerary-map"
+                />
+            </div>
+
+            <!-- Правая часть: заголовок, подзаголовок, описание, иконки -->
+            <div class="tour-itinerary-right">
+
+                <!-- Небольшой заголовок "TOUR ITINERARY" с красной линией слева (по аналогии с ABOUT US) -->
+                <h2 class="tour-itinerary-heading">TOUR ITINERARY</h2>
+
+                <!-- Основной заголовок-надпись -->
+                <h3 class="tour-itinerary-title">From Geneve <span class="faded-text">to Zürich</span></h3>
+
+                <!-- Описание маршрута -->
+                <p class="tour-itinerary-description">
+                    We will travel through almost the entire country, from Geneve to Zürich.
+                    Many amazing places await us, including mountains and scenes. You will see
+                    the real Switzerland in all its glory.
+                </p>
+
+                <!-- Тонкая горизонтальная линия -->
+                <hr class="tour-itinerary-divider" />
+
+                <!-- Блок с «фичами» (иконка + описание). Добавьте столько, сколько нужно -->
+                <div class="tour-itinerary-features">
+
+                    <article class="feature-item">
+                        <!-- Иконка -->
+                        <img
+                                src="./icons/guide-icon.svg"
+                                alt="Professional Guide"
+                                class="feature-icon"
+                        />
+                        <!-- Текст -->
+                        <div class="feature-content">
+                            <h4 class="feature-title">Professional Guide</h4>
+                            <p class="feature-text">
+                                A professional guide will accompany you along the entire route,
+                                who will show you the most beautiful places.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="feature-item">
+                        <img
+                                src="./icons/satisfaction-icon.svg"
+                                alt="Satisfaction Icon"
+                                class="feature-icon"
+                        />
+                        <div class="feature-content">
+                            <h4 class="feature-title">110% Satisfaction</h4>
+                            <p class="feature-text">
+                                Switzerland will steal your heart from the very first day of our trip.
+                                It is impossible not to fall in love with it!
+                            </p>
+                        </div>
+                    </article>
+
+                </div><!-- /tour-itinerary-features -->
+
+            </div><!-- /tour-itinerary-right -->
+
+        </div><!-- /tour-itinerary-container -->
+    </section>
+
+    <section class="about-switzerland">
+        <div class="container-about">
+            <!-- Небольшой заголовок с красной полоской слева -->
+            <h2 class="about-switzerland-heading">ABOUT SWITZERLAND</h2>
+
+            <div class="top-row">
+                <!-- Левая часть с большой буквой A -->
+                <div class="big-letter-wrap">
+                    <span class="big-letter">A</span>
+                </div>
+
+                <!-- Средняя часть: заголовок + параграф(ы) -->
+                <div class="middle-content">
+                    <h3 class="alps-title">Land of The  Majestic Alps </h3>
+                    <p class="alps-paragraph">
+                        It is believed that the name of this distinctive country
+                        comes from the Old High German word Swēizzar, originally referring to its people.
+                    </p>
+                </div>
+
+                <!-- Правая часть: ещё текст -->
+                <div class="right-content">
+                    <p>
+                        Switzerland is famous for its majestic Alps, crystal-clear lakes,
+                        picturesque villages, and lush green meadows. Its breathtaking beauty
+                        is simply beyond words!
+                    </p>
+                    <p>
+                        Switzerland is also known for its stunning landscapes, skiing, hiking,
+                        rich history, and diverse culture. These attractions draw travelers
+                        from around the world year-round.
+                    </p>
+                </div>
+            </div><!-- /top-row -->
+
+            <!-- Блок со статистикой (4 колонки) -->
+            <div class="stats-row">
+                <article class="stat-item">
+                    <h4 class="stat-number">48,000+</h4>
+                    <p class="stat-label">Mountains</p>
+                </article>
+
+                <article class="stat-item">
+                    <h4 class="stat-number">7,000+</h4>
+                    <p class="stat-label">Lakes</p>
+                </article>
+
+                <article class="stat-item">
+                    <h4 class="stat-number">65,000+</h4>
+                    <p class="stat-label">Kilometers of hiking trails</p>
+                </article>
+
+                <article class="stat-item">
+                    <h4 class="stat-number">200+</h4>
+                    <p class="stat-label">Glaciers</p>
+                </article>
+            </div><!-- /stats-row -->
+        </div><!-- /container-about -->
+    </section>
+
+    <section class="places">
+        <div class="places-container">
+
+            <!-- Левая часть (заголовок, список городов, фото) -->
+            <div class="places-left">
+                <!-- Малый заголовок с красной линией -->
+                <h2 class="places-heading">PLACES</h2>
+                <!-- Большой вопрос -->
+                <h3 class="places-title">Where do we go?</h3>
+
+                <!-- Список городов -->
+                <ul class="city-tabs">
+                    <li class="city-tab active">Bern</li>
+                    <li class="city-tab">Geneva</li>
+                    <li class="city-tab">Basel</li>
+                    <li class="city-tab">Lausanne</li>
+                    <li class="city-tab">Zürich</li>
+                </ul>
+
+                <!-- Контейнер фото с особым скруглением углов -->
+                <div class="city-image-wrap">
+                    <!-- Замените "bern.jpg" на нужное фото -->
+                    <img src="./images/bern.png" alt="Bern" class="city-image">
+                </div>
+            </div>
+
+            <!-- Правая часть (контент о городе) -->
+            <div class="places-right">
+                <!-- Подзаголовок -->
+                <p class="places-subtitle">Bern - First point</p>
+                <!-- Основной заголовок -->
+                <h3 class="places-city-title">The Capital City of Switzerland</h3>
+                <!-- Количество ночей -->
+                <span class="places-duration">1 night</span>
+                <!-- Текст описания -->
+                <p class="places-description">
+                    We begin our journey in Bern, the capital of Switzerland.
+                    On a walking tour, you will explore the charming Old Town,
+                    the Federal Palace, the Zytglogge clock tower, and more.
+                </p>
+                <!-- Кнопка -->
+                <button id="open-modal-btn" class="places-button">Book now &rarr;</button>
+
+
+            </div>
+
+        </div>
+
+        <!-- Модальное окно (скрыто по умолчанию) -->
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal">
+                <!-- Кнопка «закрыть» в верхнем правом углу -->
+                <button class="modal-close" id="modal-close">&times;</button>
+
+                <h2 class="modal-title">Book your journey!</h2>
+                <p class="modal-subtitle">
+                    Complete the form below, and we will contact you soon to discuss the details!
+                </p>
+
+                <form class="modal-form">
+                    <input type="text" placeholder="Your Name" class="modal-input">
+                    <input type="text" placeholder="Your Phone" class="modal-input">
+                    <input type="email" placeholder="Your Email" class="modal-input">
+                    <input type="text" placeholder="Choose date" class="modal-input">
+
+                    <button type="submit" class="modal-submit-button">Request a quote</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="stunning-spots">
+        <div class="stunning-container">
+
+            <!-- Заголовок: красная полоска + "STUNNING SPOTS" -->
+            <h2 class="spots-heading">STUNNING SPOTS</h2>
+
+            <!-- Основной заголовок (две части текста: "Beautiful" ярче, "Landscapes" чуть тусклее) -->
+            <h3 class="spots-title">
+                <span class="spots-title-strong">Beautiful</span>
+                <span class="spots-title-faded">Landscapes</span>
+            </h3>
+
+            <!-- Короткое описание -->
+            <p class="spots-description">
+                The beauty of Switzerland can hardly be overestimated. It has literally everything:
+                glaciers, green forests, mountains. Come and see with your own eyes.
+            </p>
+
+            <!-- Галерея фото (3 штуки) -->
+            <div class="spots-gallery">
+                <figure class="spots-item">
+                    <img src="./images/landscape1.png" alt="Landscape 1" class="spots-image spots-1" />
+                </figure>
+
+                <figure class="spots-item">
+                    <img src="./images/landscape2.png" alt="Landscape 2" class="spots-image spots-2" />
+                </figure>
+
+                <figure class="spots-item">
+                    <img src="./images/landscape3.png" alt="Landscape 3" class="spots-image spots-3" />
+                </figure>
+            </div>
+
+        </div><!-- /stunning-container -->
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Меню в футере -->
+        <nav class="footer-menu">
+            <ul class="footer-menu-list">
+                <li class="footer-menu-item"><a href="/" class="footer-menu-link">About us</a></li>
+                <li class="footer-menu-item"><a href="/" class="footer-menu-link">Itinerary</a></li>
+                <li class="footer-menu-item"><a href="/" class="footer-menu-link">Testimonials</a></li>
+                <li class="footer-menu-item"><a href="/" class="footer-menu-link">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- Соц. иконки справа -->
+        <div class="footer-social">
+            <!-- Пример ссылок на соцсети; замените src и href под свои файлы/адреса -->
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+                <img src="./icons/Instagram.svg" alt="Instagram icon" />
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+                <img src="./icons/Youtube.svg" alt="YouTube icon" />
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+                <img src="./icons/Twitter.svg" alt="Twitter icon" />
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"/>
+    <title>FurnitureLanding</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+
+        <!-- Логотип -->
+        <a class="header-logo" href="/">
+            <img src="./images/logo.png"
+                 alt="FurnitureLanding Logo"
+                 class="header-logo-image"
+                 width="142" height="80" loading="lazy" />
+        </a>
+
+        <!-- Навигация -->
+        <nav class="header-menu">
+            <ul class="header-menu-list">
+                <li class="header-menu-item">
+                    <!-- Активная страница "Home" -->
+                    <a href="/" class="header-menu-link active"
+                       data-lng-key="navHome">Home</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link"
+                       data-lng-key="navProduct">Product</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link"
+                       data-lng-key="navServices">Services</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link"
+                       data-lng-key="navAboutUs">About us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Доп. кнопка (например, выбор языка) -->
+        <div class="header-actions">
+            <button class="header-language-button button" type="button"
+                    id="lang-btn" data-lng-key="langButton">
+                ENG/EST
+            </button>
+        </div>
+
+    </div><!-- /.header-inner -->
+
+    <!-- Текст и кнопка поверх фона дивана -->
+    <div class="header-content">
+        <h1 class="header-title"
+            data-lng-key="headerTitle">
+            BEST FURNITURE<br>FOR YOUR HOME
+        </h1>
+        <p class="header-subtitle"
+           data-lng-key="headerSubtitle">
+            Our practice is designing complete environments exceptional buildings, communities and place in special situations, here a uniques history
+        </p>
+        <button class="header-cta"
+                data-lng-key="headerCtaBtn">Shop Now</button>
+    </div>
+</header>
+
+<main class="content">
+
+    <section class="body-section">
+        <!-- Небольшой подзаголовок -->
+        <p class="body-subtitle"
+           data-lng-key="bodySubtitle">
+            WE BELIEVE DESERVE A BEAUTIFUL HOME
+        </p>
+
+        <!-- Крупный заголовок (несколько строк, если нужно) -->
+        <h2 class="body-title"
+            data-lng-key="bodyTitle">
+            AFTER 20 YEARS OF CRAFTING HIGH-QUALITY FURNITURE, WE ARE EXCITED TO BRING OUR COLLECTION TO THE SWISS MARKET.
+        </h2>
+    </section>
+
+    <section class="design-section">
+        <div class="design-container">
+
+            <!-- Левая карточка: фотография кресла -->
+            <div class="design-image-wrap">
+                <img
+                        src="./images/design-chair.png"
+                        alt="Cozy Chair"
+                        class="design-image"
+                />
+            </div>
+
+            <!-- Правая карточка: текст + кнопка -->
+            <div class="design-info">
+                <h2 class="design-title"
+                    data-lng-key="designTitle">
+                    Design & Personalize Your Furniture
+                </h2>
+                <p class="design-text"
+                   data-lng-key="designText">
+                    With years of expertise in crafting high-quality furniture, we bring you the freedom
+                    to create pieces that match your style. Explore our collection and customize every detail
+                    to make your home truly unique.
+                </p>
+                <button class="design-button"
+                        data-lng-key="designBtn">Shop Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="product-container">
+
+            <!-- Заголовок и подзаголовок -->
+            <h2 class="product-heading"
+                data-lng-key="productHeading">
+                THE MOST SOUGHT-AFTER &amp; HIGHLY <br> VALUED PRODUCT
+            </h2>
+            <p class="product-subtitle"
+               data-lng-key="productSubtitle">
+                Discover our most in-demand products that everyone is talking about.
+            </p>
+
+            <!-- Блок с «табами» (или просто кнопки) -->
+            <div class="product-tabs">
+                <button class="product-tab active"
+                        data-lng-key="productTabNew">
+                    New Product
+                </button>
+                <button class="product-tab"
+                        data-lng-key="productTabSpecial">
+                    Special Price
+                </button>
+                <button class="product-tab"
+                        data-lng-key="productTabBest">
+                    Best Sellers
+                </button>
+            </div>
+
+            <!-- Сетка товаров (6 карточек) -->
+            <div class="product-grid">
+
+                <!-- Карточка 1 -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img src="./images/product-1.png" alt="Faux Shearling Armchair" class="product-image" />
+                    </div>
+                    <h3 class="product-name"
+                        data-lng-key="productName1">
+                        FAUX SHEARLING ARMCHAIR
+                    </h3>
+                    <span class="product-price"
+                          data-lng-key="productPrice1">
+            439 €
+          </span>
+                </article>
+
+                <!-- Карточка 2 -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img src="./images/product-2.png" alt="Folding Bouclé Armchair" class="product-image" />
+                    </div>
+                    <h3 class="product-name"
+                        data-lng-key="productName2">
+                        FOLDING BOUCLÉ ARMCHAIR
+                    </h3>
+                    <span class="product-price"
+                          data-lng-key="productPrice2">
+            439 €
+          </span>
+                </article>
+
+                <!-- Карточка 3 -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img src="./images/product-3.png" alt="Wooden Side Table" class="product-image" />
+                    </div>
+                    <h3 class="product-name"
+                        data-lng-key="productName3">
+                        WOODEN SIDE TABLE
+                    </h3>
+                    <span class="product-price"
+                          data-lng-key="productPrice3">
+            439 €
+          </span>
+                </article>
+
+                <!-- Карточка 4 -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img src="./images/product-4.png" alt="Oak Hallway" class="product-image" />
+                    </div>
+                    <h3 class="product-name"
+                        data-lng-key="productName4">
+                        OAK HALLWAY
+                    </h3>
+                    <span class="product-price"
+                          data-lng-key="productPrice4">
+            439 €
+          </span>
+                </article>
+
+                <!-- Карточка 5 -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img src="./images/product-5.png" alt="Magazine Rack" class="product-image" />
+                    </div>
+                    <h3 class="product-name"
+                        data-lng-key="productName5">
+                        MAGAZINE RACK
+                    </h3>
+                    <span class="product-price"
+                          data-lng-key="productPrice5">
+            439 €
+          </span>
+                </article>
+
+                <!-- Карточка 6 -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img src="./images/product-6.png" alt="Elm Wood Shelving" class="product-image" />
+                    </div>
+                    <h3 class="product-name"
+                        data-lng-key="productName6">
+                        ELM WOOD SHELVING
+                    </h3>
+                    <span class="product-price"
+                          data-lng-key="productPrice6">
+            439 €
+          </span>
+                </article>
+
+            </div><!-- /product-grid -->
+        </div><!-- /product-container -->
+    </section>
+
+    <section class="guarantee-section">
+        <div class="guarantee-container">
+
+            <!-- Подзаголовок и основной заголовок -->
+            <p class="guarantee-subtitle"
+               data-lng-key="guaranteeSubtitle">
+                Why Buy From Us
+            </p>
+            <h2 class="guarantee-title"
+                data-lng-key="guaranteeTitle">
+                Lifetime Guarantee
+            </h2>
+
+            <!-- Сетка из 4 карточек (2 в ряд, 2 строки) -->
+            <div class="guarantee-grid">
+
+                <!-- Карточка 1 -->
+                <article class="guarantee-card" style="animation-delay: 0.1s">
+                    <img
+                            src="./icons/wood-icon.svg"
+                            alt="Wood Icon"
+                            class="guarantee-icon"
+                    />
+                    <h3 class="guarantee-card-title"
+                        data-lng-key="guaranteeCardTitle1">
+                        Premiere Hardwoods
+                    </h3>
+                    <p class="guarantee-card-text"
+                       data-lng-key="guaranteeCardText1">
+                        We source only top-quality hardwoods...
+                    </p>
+                </article>
+
+                <!-- Карточка 2 -->
+                <article class="guarantee-card" style="animation-delay: 0.2s">
+                    <img
+                            src="./icons/star-icon.svg"
+                            alt="Star Icon"
+                            class="guarantee-icon"
+                    />
+                    <h3 class="guarantee-card-title"
+                        data-lng-key="guaranteeCardTitle2">
+                        Excellent Customer Service
+                    </h3>
+                    <p class="guarantee-card-text"
+                       data-lng-key="guaranteeCardText2">
+                        We’re a custom furniture maker...
+                    </p>
+                </article>
+
+                <!-- Карточка 3 -->
+                <article class="guarantee-card" style="animation-delay: 0.3s">
+                    <img
+                            src="./icons/shipping-icon.svg"
+                            alt="Shipping Icon"
+                            class="guarantee-icon"
+                    />
+                    <h3 class="guarantee-card-title"
+                        data-lng-key="guaranteeCardTitle3">
+                        In-Home Shipping
+                    </h3>
+                    <p class="guarantee-card-text"
+                       data-lng-key="guaranteeCardText3">
+                        We work with a network of shipping companies...
+                    </p>
+                </article>
+
+                <!-- Карточка 4 -->
+                <article class="guarantee-card" style="animation-delay: 0.4s">
+                    <img
+                            src="./icons/furniture-icon.svg"
+                            alt="Furniture Icon"
+                            class="guarantee-icon"
+                    />
+                    <h3 class="guarantee-card-title"
+                        data-lng-key="guaranteeCardTitle4">
+                        Unique Style
+                    </h3>
+                    <p class="guarantee-card-text"
+                       data-lng-key="guaranteeCardText4">
+                        A unique and different style from other furniture...
+                    </p>
+                </article>
+
+            </div><!-- /guarantee-grid -->
+        </div><!-- /guarantee-container -->
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Меню в футере -->
+        <nav class="footer-menu">
+            <ul class="footer-menu-list">
+                <li class="footer-menu-item">
+                    <a href="/" class="footer-menu-link"
+                       data-lng-key="footerAbout">About us</a>
+                </li>
+                <li class="footer-menu-item">
+                    <a href="/" class="footer-menu-link"
+                       data-lng-key="footerItinerary">Product</a>
+                </li>
+                <li class="footer-menu-item">
+                    <a href="/" class="footer-menu-link"
+                       data-lng-key="footerTestimonials">Design</a>
+                </li>
+                <li class="footer-menu-item">
+                    <a href="/" class="footer-menu-link"
+                       data-lng-key="footerContacts">Guaranatee</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Соц. иконки справа -->
+        <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+                <img src="./icons/Instagram.svg" alt="Instagram icon" />
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+                <img src="./icons/Youtube.svg" alt="YouTube icon" />
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+                <img src="./icons/Twitter.svg" alt="Twitter icon" />
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Модальное окно (по умолчанию скрыто) -->
+<div class="modal-overlay" id="purchase-modal-overlay">
+    <div class="modal-window">
+        <!-- Кнопка "закрыть" -->
+        <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+
+        <h2 class="modal-title"
+            data-lng-key="modalTitle">
+            Complete Your Purchase
+        </h2>
+        <p class="modal-subtitle"
+           data-lng-key="modalSubtitle">
+            Enter your details so we can process your order quickly and safely.
+        </p>
+
+        <form class="modal-form">
+            <label>
+                <span data-lng-key="modalEmailLabel">Email:</span>
+                <input type="email" name="email" required placeholder="example@mail.com" />
+            </label>
+
+            <label>
+                <span data-lng-key="modalPhoneLabel">Phone:</span>
+                <input type="tel" name="phone" required placeholder="+1 234-567-8901" />
+            </label>
+
+            <label>
+                <span data-lng-key="modalAddressLabel">Address:</span>
+                <input type="text" name="address" required placeholder="123 Furniture St." />
+            </label>
+
+            <button type="submit" class="modal-submit-btn"
+                    data-lng-key="modalSubmitBtn">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

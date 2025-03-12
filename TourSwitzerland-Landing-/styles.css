@@ -1,0 +1,1612 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter18pt-Light.woff2') format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter28pt-Bold.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter18pt-SemiBold.woff2') format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter18pt-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter18pt-Medium.woff2') format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('./fonts/Cormorant-Bold.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Нормализация блочной модели */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* Убираем padding у ul, ol */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/* Убираем margin body */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/* Убираем margin h1..h6, p, ul, ol, dl */
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl
+):where([class]) {
+    margin-block: 0;
+}
+
+/* ... */
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Списки без маркеров */
+:where(ul[class]) {
+    list-style: none;
+}
+
+:where(address[class]) {
+    font-style: normal;
+}
+
+p {
+    --paragraphMarginBottom: 24px;
+    margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+/* Изображения и видео */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Наследуем шрифт для input, textarea, button */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+html {
+    height: 100%;
+    scrollbar-gutter: stable;
+}
+
+/* Плавный скролл */
+html,
+:has(:target) {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+    line-height: 1.5;
+}
+
+a:where([class]) {
+    display: inline-flex;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+/* svg fill/stroke */
+:where([fill]:not([fill="none"], [fill^="url"])) {
+    fill: currentColor;
+}
+:where([stroke]:not([stroke="none"], [stroke^="url"])) {
+    stroke: currentColor;
+}
+svg * {
+    transition-property: fill, stroke;
+}
+
+/* Таблицы collapse */
+:where(table) {
+    border-collapse: collapse;
+    border-color: currentColor;
+}
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Переменные */
+:root {
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --color-dark-grey: #505155;
+    --color-light-grey: #808080;
+    --color-lighter-grey: #A6A0A0;
+
+    --font-family-base: 'Inter', sans-serif;
+    --font-family-heading: 'Cormorant', serif;
+    --container-padding-x: 15px;
+    --transition-duration: 0.2s;
+}
+
+/* Транзишны */
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+/* Основные стили */
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-light);
+    color: var(--color-lighter-grey);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    height: 38px;
+    padding-inline: 26px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+    background-color: var(--color-light);
+}
+
+button:hover {
+    background-color: var(--color-lighter-grey);
+}
+
+a {
+    color: var(--color-dark);
+}
+a:hover {
+    color: var(--color-light-grey);
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding-inline: 32px;
+}
+
+.header-menu-list {
+    display: flex;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.header-menu-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+}
+
+.header-logo {
+    flex-shrink: 0;
+}
+
+/* Кнопки в шапке */
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.header-language-button {
+    /* пример */
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 530px 120px;
+    color: var(--color-light);
+    background-image: url('images/header.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Верхняя часть (текст) */
+.banner-body {
+    margin-bottom: 40px; /* отступ от нижней части */
+}
+
+.banner-info {
+    display: flex;
+    font-size: 20px;
+    line-height: 24.2px;
+    font-weight: 700;
+    align-items: center;
+
+}
+
+.banner-info::before {
+    content: '';
+    width: min(2.18vw, 42px);
+    height: 2px;
+    margin-right: 7px;
+    background: url("icons/Rectangle 1.svg") center/contain no-repeat;
+}
+
+.banner-title {
+    font-size: min(9.89vw, 190px);
+    line-height: 230.09px;
+    font-weight: 700;
+    font-family: var(--font-family-heading);
+    margin: 10px 0 0 0;
+}
+
+/* Pagination (тонкая линия) */
+.banner-pagination-list {
+    display: flex;
+    gap: 28px;
+}
+
+.banner-pagination-item {
+    width: 820px;
+    height: 1px;
+    background-color: #D9D9D9;
+}
+
+/* Нижняя часть: grid (2 колонки) */
+.banner-lower {
+
+    display: grid;
+    /* 2 колонки (фичи слева, trip справа) при ширине > 1200px */
+    grid-template-columns: 2fr 1fr;
+    /* Объявляем 1 строку с именованными областями:
+       "features trip" */
+    grid-template-areas: "features trip";
+    gap: 40px;
+    margin-top: 156px;
+}
+
+/* Левая колонка (фичи) */
+.banner-features {
+    display: flex;
+    grid-area: features;
+    gap: 0;
+}
+
+
+
+.banner-feature {
+    position: relative;
+    width: 170px;      /* примерная ширина */
+    height: 190px;     /* примерная высота */
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 0;  /* у всех карточек нет скруглений */
+}
+
+/* Только у первой карточки скругляем верхний левый угол */
+.banner-feature:first-child {
+    border-top-left-radius: 95px;
+}
+
+.banner-feature-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* полупрозрачность */
+}
+
+
+.banner-feature-title {
+    position: relative;
+    z-index: 2;
+    font-family: 'Cormorant', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.2;
+    text-shadow: 0px 63px 18px rgba(0, 0, 0, 0.00), 0px 40px 16px rgba(0, 0, 0, 0.01), 0px 23px 14px rgba(0, 0, 0, 0.05), 0px 10px 10px rgba(0, 0, 0, 0.09), 0px 3px 6px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+/* Правая колонка (Next Trip) */
+.banner-trip {
+    /* Размер и форма */
+    width: 400px;                /* примерная ширина */
+    height: 590px;               /* примерная высота */
+    background-color: #fff;
+    border-radius: 0 0 0px 200px; /* скругляем нижние углы (полукруг) */
+    overflow: hidden;            /* чтобы картинка не «вылазила» */
+    position: relative;
+    grid-area: trip;
+
+}
+
+.banner-trip-image {
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-top: 6px;
+    display: block;
+    width: 446px;
+    height: 280px;             /* верхняя половина высоты контейнера */
+    object-fit: cover;        /* обрезаем картинку под размер */
+}
+
+.banner-trip-content {
+    /* нижние 50% контейнера */
+    height: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.trip-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+
+.trip-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 10px 0;
+}
+
+.trip-description {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.read-more-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.trip-read-more {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 8px;
+    color: #000;
+}
+
+.arrow {
+    width: 22px;
+    margin-left: 8px;
+    object-fit: contain;
+}
+
+/* Адаптив */
+@media (max-width: 750px) {
+    .header-menu-list {
+        column-gap: 24px;
+    }
+
+    .header-menu-link {
+        height: 32px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header-menu {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    /* Для баннера */
+    .banner {
+        padding: 100px 20px; /* уменьшаем отступы */
+    }
+
+    .banner-lower {
+        grid-template-columns: 1fr;
+
+    }
+
+    .banner-features {
+        justify-content: center;
+
+
+    }
+
+    .banner-feature {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .trip-title {
+        font-size: 20px;
+    }
+    .banner-title {
+        font-size: 65px;
+        color: #000000;
+
+    }
+
+    .banner-info {
+        color: var(--color-dark);
+    }
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    .banner-lower {
+        grid-template-columns: 1fr;         /* одна колонка */
+        /* Две строки: сначала features, потом trip */
+        grid-template-areas:
+      "features"
+      "trip";
+    }
+}
+
+
+@media (max-width: 804px) {
+    .banner-features {
+        flex-wrap: wrap;      /* разрешаем перенос */
+    }
+    .banner-feature {
+        width: 50%;           /* 2 карточки в строке */
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*About us*/
+
+.about-us {
+    /* Общие отступы секции. При необходимости отрегулируйте. */
+    padding: 60px 20px;
+}
+
+.about-us-container {
+    /* Две колонки в строку, выравнивание по верхнему краю */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    /* Центрируем и ограничиваем ширину */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ЛЕВАЯ ЧАСТЬ */
+.about-us-left {
+    /* Примерное деление пространства, можно корректировать */
+    flex: 0 1 50%;
+    max-width: 600px;
+    /* Чтобы правая колонка не прилипала вплотную, можно дать небольшой отступ */
+    margin-right: 40px;
+}
+
+/* Заголовок "ABOUT US" */
+.about-us-heading {
+    display: inline-flex;          /* Чтобы псевдоэлемент был на одной линии */
+    align-items: center;
+
+    margin: 0 0 16px;             /* Отступ снизу */
+    font-size: 20px;
+    font-weight: 700;
+    color: #777;
+    text-transform: uppercase;    /* Опционально — все буквы прописные */
+    letter-spacing: 0.5px;        /* Чуть увеличенный интервал между буквами */
+}
+
+.about-us-heading::before {
+    content: "";
+    display: block;
+
+    width: 42px;                  /* Длина красной полоски */
+    height: 2px;
+    margin-right: 8px;
+
+    background-color: #e63900;    /* Цвет полоски */
+}
+
+/* Крупный заголовок (основной текст слева) */
+.about-us-title {
+                   /* Сбрасываем отступы */
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: var(--font-family-heading);
+    color: #000;
+    margin-top: 76px
+
+}
+
+.highlight {
+    color: #03AAD8;
+}
+
+/* ПРАВАЯ ЧАСТЬ */
+.about-us-right {
+    flex: 0 1 50%;
+    max-width: 900px;
+    margin-top: 135px;
+
+    /* Чтобы текст наверху был вровень с крупным текстом слева,
+       при необходимости можно подрегулировать отступы.
+       Например, если нужно чуть сместить вниз, можно добавить:
+       margin-top: 14px;
+       - но в большинстве случаев align-items: flex-start достаточно.
+    */
+}
+
+.about-us-right p {
+    margin: 0 0 16px; /* Отступы между абзацами */
+    font-size: 26px;
+    line-height: 1.4;
+    color: #333;
+
+
+}
+
+/* Серая полоса ТОЛЬКО ПОД ТЕКСТОМ справа */
+.about-us-divider {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 16px 0 0; /* Отступ сверху и снизу */
+    width: 100%;      /* Линия на всю ширину правого блока */
+}
+
+@media (max-width: 768px) {
+    /* Общий отступ сверху для секции */
+    .about-us {
+        padding-top: 40px;
+    }
+
+    /* Колонки в столбик */
+    .about-us-container {
+        flex-direction: column;
+    }
+
+    /* Левая и правая колонки на всю ширину */
+    .about-us-left,
+    .about-us-right {
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: 60px;
+    }
+
+    /* Уменьшаем заголовок слева, если нужен другой размер */
+    .about-us-title {
+        font-size: 32px;
+    }
+
+    /* Адаптивный размер текста справа */
+    .about-us-right p {
+        font-size: 16px;
+    }
+}
+
+
+/* ---------- Секция с фоном и шагами (01,02,03) ---------- */
+.steps-section {
+    position: relative;
+    width: 100%;
+    background: url("./images/lake-bg.png") center/cover no-repeat;
+    padding: 202px 20px;
+}
+
+.steps-container {
+    /* Центрируем контент, ограничиваем ширину */
+    max-width: 1200px;
+    margin: 0 auto;
+
+    /* Выстраиваем три карточки в строку */
+    display: flex;
+    flex-wrap: wrap;       /* Разрешаем перенос, если экран узкий */
+    justify-content: center; /* По макету можно использовать space-between или center */
+    gap: 54px;            /* Расстояние между карточками */
+}
+
+.step-card {
+    background: var(--color-light);
+
+    width: 364px;
+    height: 450px;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    font-size: 120px;
+    font-weight: 700;
+    color: transparent;
+    background: url("./images/texture.jpg") center/cover no-repeat;
+    font-family: var(--font-family-heading);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+}
+
+.step-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: var(--color-dark);
+}
+
+.step-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+    color: var(--color-lighter-grey);
+}
+
+
+.step-1{
+    border-radius: 0px 0px 182px 0px;
+}
+
+.step-2{
+    border-radius: 152px 0px 0px 0px;
+}
+
+.step-3{
+    border-radius: 0px 0px 0px 182px;
+}
+
+/* ---------- Адаптивные стили ---------- */
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+    }
+    .about-us-left,
+    .about-us-right {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .about-us-title {
+        font-size: 32px; /* Уменьшаем крупный текст */
+    }
+
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-card {
+        width: 100%;         /* На мобильных карточки на всю ширину */
+        max-width: 340px;    /* или задайте max-width, чтобы не было слишком широко */
+    }
+}
+
+
+
+/* ----- TOUR ITINERARY SECTION ----- */
+.tour-itinerary {
+    background-color: #232428; /* Тёмный фон секции */
+    color: #aaa;              /* Светлый текст по умолчанию */
+    padding: 80px 20px;       /* Отступы секции сверху/снизу, слева/справа */
+}
+
+.tour-itinerary-container {
+    max-width: 1200px;        /* Центрируем и ограничиваем ширину */
+    margin: 0 auto;
+
+    display: flex;            /* Две колонки (карта слева, текст справа) */
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Левая колонка (карта) */
+.tour-itinerary-left {
+    flex: 0 1 50%;
+    max-width: 600px;
+    margin-right: 40px; /* Отступ справа */
+}
+
+.tour-itinerary-map {
+    margin-top: 65px;
+    width: 920px;
+    height: 590px;
+    flex-shrink: 0;
+
+    display: block;
+}
+
+/* Правая колонка */
+.tour-itinerary-right {
+    flex: 0 1 50%;
+    max-width: 560px;
+}
+
+/* Заголовок "TOUR ITINERARY" с красной линией слева */
+.tour-itinerary-heading {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 16px;
+    position: relative;
+}
+
+.tour-itinerary-heading::before {
+    content: "";
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    background-color: #e63900; /* Красная линия */
+    margin-right: 8px;
+}
+
+/* Основной заголовок (From Geneve to Zürich) */
+.tour-itinerary-title {
+    margin: 0 0 24px;
+    font-size: 55px;
+    font-weight: 700;
+    font-family: var(--font-family-heading);
+    color: var(--color-light);
+}
+
+.faded-text {
+    color:var(--color-dark-grey);  /* Для слова "to Zürich" более приглушённый оттенок */
+    font-weight: 400;
+}
+
+/* Основной текст-описание */
+.tour-itinerary-description {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.4;
+    color: var(--color-dark-grey);
+}
+
+/* Горизонтальная полоса */
+.tour-itinerary-divider {
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+    margin: 24px 0;
+}
+
+/* Блок с «фичами» */
+.tour-itinerary-features {
+    margin-top: 24px;
+}
+
+/* Каждая «фича» (иконка + текст) */
+.feature-item {
+    display: flex;
+    align-items: flex-start; /* Иконка и текст в линию сверху */
+    margin-bottom: 24px;     /* Отступ между фичами */
+}
+
+.feature-icon {
+    width: 75px;  /* Примерный размер иконки */
+    height: 75px; /* Или авто, если SVG */
+    margin-right: 16px;
+}
+
+.feature-title {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--color-light);
+}
+
+.feature-text {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--color-dark-grey);
+}
+
+/* ----- Адаптивность ----- */
+@media (max-width: 768px) {
+    .tour-itinerary-container {
+        flex-direction: column;
+    }
+    .tour-itinerary-left,
+    .tour-itinerary-right {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .tour-itinerary-title {
+        font-size: 28px;
+    }
+    .tour-itinerary-description {
+        font-size: 16px;
+    }
+    .feature-title {
+        font-size: 18px;
+    }
+    .feature-text {
+        font-size: 14px;
+    }
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tour-itinerary-map{
+        height: auto;
+    }
+}
+
+
+
+/* ------------------
+   ABOUT SWITZERLAND
+--------------------- */
+.about-switzerland {
+    padding: 60px 20px; /* Отступы секции сверху/снизу, слева/справа */
+    background-color: #fff;
+    color: var(--color-dark);
+
+}
+
+/* Контейнер для центрирования и max-width */
+.container-about {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок "ABOUT SWITZERLAND" */
+.about-switzerland-heading {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    margin: 0 0 40px; /* Отступ снизу */
+    position: relative;
+}
+
+.about-switzerland-heading::before {
+    content: "";
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    background-color: #e63900; /* Красная линия */
+    margin-right: 8px;
+}
+
+/* TOP ROW (3 колонки: A, заголовок/текст, ещё текст) */
+.top-row {
+    display: flex;
+    flex-wrap: wrap; /* Позволяем перенос, если экран узкий */
+    gap: 94px;
+    margin-bottom: 40px; /* Отступ между верхними блоками и нижней статистикой */
+}
+
+/* Левая часть с большой буквой "A" */
+.big-letter-wrap {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: flex-start; /* Прижимаем букву к верху */
+    justify-content: center;
+}
+
+/* Сама буква "A", на которую накладывается изображение */
+.big-letter {
+    display: inline-block;
+    font-size: 300px;
+    font-weight: 700;
+    color: transparent; /* Делаем текст прозрачным, чтобы видеть фон */
+    background: url("images/alps-pattern.jpg") center/cover no-repeat;
+    font-family: var(--font-family-heading);
+    -webkit-background-clip: text;  /* Для Chrome/Safari */
+    background-clip: text;          /* Стандартное свойство */
+    -webkit-text-fill-color: transparent; /* Для Safari */
+
+    /* Можно настроить тень под буквой:
+       text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    */
+}
+
+/* Средняя колонка (заголовок + параграф) */
+.middle-content {
+    flex: 1 1 130px;
+    max-width: 300px; /* При необходимости ограничиваем ширину */
+    margin-right: 40px;
+}
+
+.alps-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 52px;
+    font-family: var(--font-family-heading);
+}
+
+.alps-paragraph {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--color-dark);
+}
+
+/* Правая колонка */
+.right-content {
+    flex: 1 1 300px;
+    max-width: 400px; /* При желании ограничиваем ширину */
+    color: var(--color-dark);
+}
+
+.right-content p {
+    margin: 7px 8px 39px;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+/* STATS (4 колонки) */
+.stats-row {
+    display: flex;
+    flex-wrap: wrap; /* Перенос для мобильных */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Каждая колонка со статистикой */
+.stat-item {
+    flex: 1 1 200px; /* Примерная ширина */
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 55px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.stat-label {
+    margin: 0;
+    font-size: 16px;
+    color: var(--color-dark);
+}
+
+/* ------------------
+   Адаптивность
+--------------------- */
+@media (max-width: 768px) {
+    .top-row {
+        flex-direction: column; /* 3 колонки в столбик */
+    }
+
+    .big-letter {
+        font-size: 470px;  /* Уменьшаем букву "A" */
+    }
+
+    .middle-content, .right-content {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .alps-title {
+        font-size: 40px;
+    }
+
+    .alps-paragraph, .right-content p {
+        font-size: 14px;
+    }
+
+    .stats-row {
+        flex-direction: column; /* 4 колонки в столбик на маленьких экранах */
+        align-items: center;
+    }
+
+    .stat-item {
+        flex: 0 1 auto;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* --------- SECTION "PLACES" --------- */
+
+.places {
+    padding: 234px 20px; /* Отступы сверху/снизу, слева/справа */
+    background-color: #fdfdfd; /* Фон секции */
+}
+
+/* Общий контейнер */
+.places-container {
+    max-width: 1200px; /* Ширина секции */
+    margin: 0 auto;
+    display: flex;     /* Две колонки: левая/правая */
+    gap: 40px;         /* Расстояние между колонками */
+}
+
+/* Левая колонка */
+.places-left {
+    flex: 1 1 50%;
+}
+
+/* Заголовок "PLACES" с красной линией */
+.places-heading {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    color: #777;
+    letter-spacing: 1px;
+    margin: 0 0 16px; /* Отступ снизу */
+    position: relative;
+}
+
+.places-heading::before {
+    content: "";
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    background-color: #e63900;
+    margin-right: 8px;
+}
+
+/* "Where do we go?" */
+.places-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 121px;
+    font-family: var(--font-family-heading);
+    color: var(--color-dark);
+}
+
+/* Города (Bern, Geneva, ...) */
+.city-tabs {
+    display: flex;
+    gap: 37px;
+    list-style: none;
+    margin: 0 0 25px; /* Отступ снизу */
+    padding: 0;
+    color: var(--color-dark);
+    font-size: 16px;
+}
+
+.city-tab {
+    position: relative; /* Для псевдоэлемента линии */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.city-tab:hover {
+    color: #000; /* При наведении */
+}
+
+.city-tab.active {
+    color: #e63900; /* Активный город */
+}
+
+.city-tab.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e63900;
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Отступ вниз */
+}
+
+/* Блок с фото */
+.city-image-wrap {
+    width: 100%;
+    max-width: 400px;    /* При необходимости ограничиваем ширину фото */
+    overflow: hidden;    /* Чтобы обрезать скруглённые углы */
+    border-top-left-radius: 180px;
+
+
+}
+
+.city-image {
+    width: 100%;
+    height: auto;
+    display: block;      /* Убираем пробелы под img */
+    object-fit: cover;   /* Если нужно «обрезать» изображение */
+}
+
+/* Правая колонка */
+.places-right {
+    flex: 1 1 50%;
+}
+
+/* Подзаголовок "Bern - First point" */
+.places-subtitle {
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 8px;
+}
+
+/* Основной заголовок о городе */
+.places-city-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 47px;
+    font-family: var(--font-family-heading);
+    color: var(--color-dark);
+}
+
+/* "1 night" */
+.places-duration {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 24px;
+    color: #ED8B1C; /* Пример оранжевого цвета */
+}
+
+/* Описание города */
+.places-description {
+    margin: 91px 0 59px;
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--color-dark-grey);
+}
+
+
+
+/* Кнопка "Book now" */
+.places-button {
+    display: inline-block;
+    align-items: center;
+    height: 38px;
+    padding-inline: 26px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+    background-color: var(--color-light);
+
+    /* Для красоты при наведении */
+    transition: background-color 0.2s;
+}
+
+.places-button:hover {
+    background-color: #686b70;
+}
+
+/* ---------- Адаптивность (до 768px) ---------- */
+@media (max-width: 768px) {
+    .places-container {
+        flex-direction: column; /* Колонки в столбик */
+    }
+    .places-left, .places-right {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .places-title {
+        font-size: 52px;
+    }
+    .city-tab {
+        font-size: 14px;
+    }
+    .places-city-title {
+        font-size: 33px;
+    }
+    .places-description {
+        font-size: 16px;
+        margin: 39px 0 56px;
+    }
+
+    .places-duration{
+        font-size: 18px;
+    }
+
+    .city-tabs{
+        margin:3px 34px 27px;
+    }
+
+}
+
+
+/* Модальное окно. По умолчанию спрятано (display: none или opacity: 0). */
+.modal-overlay {
+    position: fixed;           /* Фиксируем на экране */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Полупрозрачный тёмный фон */
+    display: none;             /* Скрыто по умолчанию */
+    justify-content: center;   /* Выравниваем по центру */
+    align-items: center;       /* Вертикальный центр */
+    z-index: 9999;            /* Поверх всего контента */
+}
+
+/* Когда у подложки есть класс "open", показываем окно */
+.modal-overlay.open {
+    display: flex; /* flex, чтобы центрировать .modal */
+}
+
+/* Сама "коробка" модального окна */
+.modal {
+    background-color: #232428; /* Тёмный фон (как на вашем скрине) */
+    color: #fff;
+    padding: 40px;
+    width: 400px;
+    max-width: 90%;           /* На мобильных, чтобы окно не вылезало */
+    border-radius: 4px;
+    position: relative;        /* Чтобы иконка "×" позиционировалась */
+}
+
+/* Кнопка "×" закрытия окна */
+.modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+/* Заголовки и подписи */
+.modal-title {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: var(--font-family-heading);
+}
+
+.modal-subtitle {
+    margin: 0 0 24px;
+    font-size: 16px;
+    color: #aaa;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Форма */
+.modal-form {
+    display: flex;
+    flex-direction: column; /* Все поля одно под другим */
+    gap: 16px;             /* Отступы между полями */
+}
+
+.modal-input {
+    background-color: #2D2E34; /* Тёмные поля */
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    color: #ccc;
+    outline: none;
+    border-radius: 4px;
+}
+
+.modal-input::placeholder {
+    color: #666; /* placeholder для наглядности */
+}
+
+.modal-submit-button {
+    background-color: #03AAD8; /* Ярко-голубой (пример) */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.modal-submit-button:hover {
+    background-color: #0080aa;
+}
+
+
+/* ------ STUNNING SPOTS SECTION ------ */
+.stunning-spots {
+    background-color: #232428;
+    color: #ccc;
+    padding: 80px 20px;
+}
+
+.stunning-container {
+    max-width: 1200px;  /* Центральный контейнер */
+    margin: 0 auto;
+}
+
+/* Заголовок с красной линией */
+.spots-heading {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #777;
+    letter-spacing: 1px;
+    margin: 0 0 16px;
+    position: relative;
+}
+
+.spots-heading::before {
+    content: "";
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    background-color: #e63900;
+    margin-right: 8px;
+}
+
+/* Основной заголовок: "Beautiful Landscapes" */
+.spots-title {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: #fff;
+    font-family: var(--font-family-heading);
+}
+
+/* Приём: "Beautiful" белым, "Landscapes" чуть тусклее */
+.spots-title-strong {
+    color: #fff;   /* Яркий */
+}
+.spots-title-faded {
+    color: var(--color-dark-grey);
+    font-weight: 400;
+}
+
+/* Описание */
+.spots-description {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--color-dark-grey);
+    margin: 0 0 66px;
+    font-weight: 400;
+    max-width: 781px;
+}
+
+.spots-1{
+    border-radius: 0px 0px 0px 231.5px;
+}
+
+.spots-2{
+    border-radius: 0px 231.5px 0px 0px;
+}
+
+.spots-3{
+    border-radius: 0px 0px 0px 231.5px;
+}
+
+/* Галерея */
+.spots-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;       /* Расстояние между картинками */
+}
+
+/* Каждая картинка (figure) */
+.spots-item {
+    flex: 1 1 calc(33.333% - 20px); /* 3 штуки в строку (примерно) */
+    margin: 0;   /* обнуляем отступ figure, если нужно */
+
+    aspect-ratio: 1 / 1;
+}
+
+/* Сами изображения (responsive) */
+.spots-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Если нужно вписывать с обрезкой */
+}
+
+/* ----- Адаптивность ----- */
+@media (max-width: 768px) {
+    .spots-title {
+        font-size: 32px;
+    }
+
+    @media (max-width: 768px) {
+        .spots-gallery {
+            flex-direction: column;
+            align-items: center;
+        }
+        .spots-item {
+            flex: 0 0 auto;
+            max-width: 470px;
+            max-height: 240px;
+            width: 100%;
+        }
+
+        .spots-1, .spots-2, .spots-3 {
+            border-radius: 0px 0px 0px 0px;
+        }
+    }
+
+
+    .spots-description {
+        font-size: 20px;
+    }
+}
+
+
+/* ------ FOOTER ------ */
+.footer {
+    background-color: #1C1C1C;  /* Тёмный фон (можно #000 или #1c1c1c) */
+    color: #fff;
+    padding: 45px 45px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Меню слева, иконки справа */
+}
+
+/* Меню */
+.footer-menu-list {
+    display: flex;
+    gap: 40px;             /* Расстояние между пунктами */
+    list-style: none;      /* Убираем маркеры */
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu-link {
+    color: var(--color-light);          /* Цвет пунктов */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.footer-menu-link:hover {
+    color: #fff;          /* При наведении */
+}
+
+/* Соц. иконки */
+.footer-social {
+    display: flex;
+    gap: 20px;            /* Расстояние между иконками */
+}
+
+.footer-social-link img {
+    width: 24px;
+    height: 24px;
+    display: block;       /* Убираем лишние отступы у img */
+}
+
+/* ----- Адаптивность ----- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;         /* Вертикально */
+        gap: 20px;
+    }
+
+    .footer-menu-list {
+        justify-content: center;        /* Центрируем меню */
+        gap: 20px;
+        text-wrap: nowrap;
+    }
+
+    .footer-social {
+        justify-content: center;        /* Иконки тоже по центру */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
