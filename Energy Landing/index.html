@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"/>
+    <title>Energy Landing</title>
+    <link rel="stylesheet" href="Styles.css"/>
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+
+        <!-- Левая часть (зелёная полоса + название) -->
+        <div class="header-left">
+            <div class="logo-bar"></div>
+            <span class="logo-text">Xurya</span>
+        </div>
+
+        <!-- Гамбургер-кнопка (только на мобильных) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Навигация -->
+        <nav class="header-nav" id="header-nav">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Правая часть (Login + зелёная кнопка) -->
+        <div class="header-right">
+            <a href="#" class="login-link">Login</a>
+            <button class="header-button">Get in Touch</button>
+        </div>
+
+    </div><!-- /.header-inner -->
+</header>
+
+<main>
+
+    <section class="hero">
+        <!-- Текст слева -->
+        <div class="hero-content">
+            <p class="hero-subtitle">#1 Energy provider in the world</p>
+            <h1 class="hero-title">
+                <span class="gradient-text">New Energy</span><br>
+                <span class="gradient-text">for the Future</span>
+            </h1>
+            <div class="hero-links">
+                <a href="#" class="hero-link">Get in touch</a>
+                <a href="#" class="hero-link">Our services</a>
+            </div>
+        </div>
+
+        <!-- Блок статистики -->
+        <div class="stats-block">
+            <div class="stat-item">
+                <span class="stat-value">6mil</span>
+                <p class="stat-label">The company's annual net income</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">315</span>
+                <p class="stat-label">Projects completed worldwide</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">120K</span>
+                <p class="stat-label">Employees work in all parts of the world</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="quality-section">
+        <div class="quality-container">
+
+            <!-- Левая часть (большой заголовок) -->
+            <div class="quality-left">
+                <h2 class="quality-title">
+                    Focusing on quality, we<br>
+                    maintain customer trust
+                </h2>
+            </div>
+
+            <!-- Правая часть (доп. текст) -->
+            <div class="quality-right">
+                <p class="quality-text">
+                    We ensure that every installation we build has strict quality checks.
+                    Sustainable solutions for an environmentally friendly and renewable future.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="features-container">
+        <div class="section-title-features">
+            <h2>
+                <strong>We offer quality,</strong><br>
+                <span>with the best materials and service</span>
+            </h2>
+        </div>
+
+
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="icons/Layered.svg" alt="Layered security">
+                </div>
+                <h3 class="feature-title">Layered security</h3>
+                <p class="feature-description">With layered security, we ensure the safety of every unit we provide.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="icons/Quality.svg" alt="Quality control">
+                </div>
+                <h3 class="feature-title">Quality control of each part</h3>
+                <p class="feature-description">Every unit you send is checked carefully for every detail.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="icons/Service.svg" alt="Reliable service">
+                </div>
+                <h3 class="feature-title">Reliable customer service</h3>
+                <p class="feature-description">Our customer service is available 24 hours a week, with qualified people.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="icons/Book.svg" alt="Maintenance manual">
+                </div>
+                <h3 class="feature-title">Maintenance manual book</h3>
+                <p class="feature-description">We provide a guidebook that can be used to ensure maximum care.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="icons/Delivered.svg" alt="Delivered safely">
+                </div>
+                <h3 class="feature-title">Delivered safely</h3>
+                <p class="feature-description">Every unit we send arrives safely and quickly, without any obstacles or drama.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="icons/Ai.svg" alt="AI-based">
+                </div>
+                <h3 class="feature-title">Based on artificial intelligence</h3>
+                <p class="feature-description">You can control and view each unit from your phone, it's very easy to use.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services-container">
+        <div class="services-wrapper">
+            <div class="services-content">
+                <div class="section-title">
+                    <h2>Trusted service,</h2>
+                    <p>for your various needs</p>
+                </div>
+
+                <!-- Кнопка, по нажатию на которую открывается модальное окно -->
+                <button class="cta-button" id="open-modal-btn">Get in touch</button>
+
+                <!-- Модальное окно (скрыто по умолчанию) -->
+                <div class="modal-overlay" id="modal-overlay">
+                    <div class="modal-window">
+                        <!-- Кнопка "закрыть" (иконка крестика) -->
+                        <button class="modal-close" id="modal-close-btn">&times;</button>
+
+                        <!-- Заголовок и подзаголовок -->
+                        <h2 class="modal-title">Get in Touch With Us</h2>
+                        <p class="modal-subtitle">
+                            We're here to answer your questions and help you find the best energy solutions.
+                        </p>
+
+                        <!-- Форма -->
+                        <form class="modal-form" id="contact-form">
+                            <!-- Full Name -->
+                            <label class="form-label" for="fullname">Full Name</label>
+                            <input class="form-input" type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+
+                            <!-- Email Address -->
+                            <label class="form-label" for="email">Email Address</label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="Email Address" required>
+
+                            <!-- Phone Number -->
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input class="form-input" type="tel" id="phone" name="phone" placeholder="Phone Number">
+
+                            <!-- Service Type (Select) -->
+                            <label class="form-label" for="service-type">Service Type</label>
+                            <select class="form-select" id="service-type" name="service-type">
+                                <option value="home-solar">Home Solar Panels</option>
+                                <option value="industry">Industry Panels</option>
+                                <option value="chargers">Chargers</option>
+                                <option value="wind">Wind Power</option>
+                            </select>
+
+                            <!-- Message (Textarea) -->
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Your message here..." rows="4"></textarea>
+
+                            <!-- Preferred Contact Method (Checkboxes) -->
+                            <div class="contact-method">
+                                <span class="contact-label">Preferred Contact Method:</span>
+                                <label>
+                                    <input type="checkbox" name="contact-method" value="email"> Email
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="contact-method" value="phone"> Phone
+                                </label>
+                            </div>
+
+                            <!-- Кнопка отправки -->
+                            <button type="submit" class="modal-submit-btn">Send Message</button>
+                        </form>
+                    </div><!-- /.modal-window -->
+                </div><!-- /.modal-overlay -->
+
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-item">
+                        <div class="service-number">01</div>
+                        <h3 class="service-title">Solar panels for home</h3>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-item">
+                        <div class="service-number">02</div>
+                        <h3 class="service-title">Solar panels for industry</h3>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-item">
+                        <div class="service-number">03</div>
+                        <h3 class="service-title">Solar panels for chargers</h3>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-item">
+                        <div class="service-number">04</div>
+                        <h3 class="service-title">Wind power generator</h3>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-image">
+                <img src="images/Trusted%20service.png" alt="Solar panels in field">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+
+            <!-- Большой заголовок (две строки, часть серым текстом) -->
+            <div class="testimonial-heading">
+                <h2>
+                    See how we solve problems,<br>
+                    <span>right on target</span>
+                </h2>
+            </div>
+
+            <!-- Обёртка для двух колонок: слева текст, справа картинка -->
+            <div class="testimonial-wrapper">
+
+                <!-- Левая колонка (Medtronic) -->
+                <div class="testimonial-left">
+                    <h3 class="company-name">Medtronic</h3>
+                    <p class="testimonial-text">
+                        We have used services from Xurya for most of our stations,
+                        this is our strategic step to continue to increase
+                        the number of solar panel usage for our stations, we are
+                        very satisfied with the services from Xurya.
+                    </p>
+                    <a href="#" class="cta-button">Get in touch</a>
+                    <p class="testimonial-author">
+                        Jeniffer Kolobaby – <span>CTO EV Medtronic</span>
+                    </p>
+                </div>
+
+                <!-- Правая колонка (картинка) -->
+                <div class="testimonial-right">
+                    <img src="./images/Medtronic.png" alt="Medtronic station" />
+                </div>
+
+            </div><!-- /testimonial-wrapper -->
+
+            <!-- Нижняя полоска с иконками (если нужна) -->
+            <div class="services-switch">
+                <!-- Первый элемент (активный, с зелёной частью) -->
+                <div class="switch-item active">
+                    <div class="switch-line">
+                        <div class="line-green"></div>
+                        <div class="line-grey"></div>
+                    </div>
+                    <span class="switch-label">
+      <img src="./icons/Electriccar.svg" alt="Icon" />
+      Electric car charging station
+    </span>
+                </div>
+
+                <div class="switch-item">
+                    <div class="switch-line">
+                        <div class="line-grey full"></div>
+                    </div>
+                    <span class="switch-label">
+      <img src="./icons/residential.svg" alt="Icon" />
+      Residential solar panels
+    </span>
+                </div>
+
+                <!-- Третий элемент (серый) -->
+                <div class="switch-item">
+                    <div class="switch-line">
+                        <div class="line-grey full"></div>
+                    </div>
+                    <span class="switch-label">
+      <img src="./icons/wind.svg" alt="Icon" />
+      Wind power for industry
+    </span>
+                </div>
+            </div>
+
+
+        </div><!-- /testimonial-container -->
+    </section>
+
+
+
+    <footer class="footer">
+        <!-- Main footer content area -->
+        <div class="footer-main">
+            <div class="footer-content">
+                <h2 class="footer-title">It's time to support zero pollution,<br><span>with renewable resources</span></h2>
+
+                <div class="footer-features">
+                    <div class="footer-feature">
+                        <div class="check-icon"></div>
+                        <span>Experienced for more than 10 years</span>
+                    </div>
+                    <div class="footer-feature">
+                        <div class="check-icon"></div>
+                        <span>Support for the latest technology</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-cta">
+                <p>By increasing the effectiveness and efficiency of electricity use, the use of renewable resources is very profitable for all industrial services.</p>
+                <a href="#" class="cta-button footer-button">Get in touch</a>
+            </div>
+        </div>
+
+
+        <div class="footer-nav">
+            <div class="header-left">
+                <div class="logo-bar"></div>
+                <span class="logo-text-footer">Xurya</span>
+            </div>
+
+            <nav class="footer-links">
+                <ul class="nav-list-footer">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">About us</a></li>
+                    <li><a href="#" class="nav-link">Features</a></li>
+                    <li><a href="#" class="nav-link">Services</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-links">
+                <a href="#" class="social-link"><img src="icons/YouTube.svg" alt="Youtube"></a>
+                <a href="#" class="social-link"><img src="icons/Facebook.svg" alt="Facebook"></a>
+                <a href="#" class="social-link"><img src="icons/X.svg" alt="X"></a>
+                <a href="#" class="social-link"><img src="icons/Twitter.svg" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+</main>
+
+</body>
+</html>
