@@ -109,20 +109,7 @@ button {
     z-index: 0;
     transition: color 0.4s;
   }
-  
-  button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150%;
-    height: 100%;
-    background: linear-gradient(45deg, #007bff, #6a11cb, #ff0075);
-    z-index: -1;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out;
-  }
-  
+
   button:hover::before {
     transform: translateX(0);
   }
@@ -140,7 +127,7 @@ button {
 /* Кнопка в стиле Kabak */
 .gradient-btn {
     height: 50px;
-    margin: 5px;
+    margin: -4px;
     width: 100%;
     background: linear-gradient(145deg, #2e2d2d, #212121);
     display: flex;
@@ -206,6 +193,105 @@ header h1 {
 header h1:hover {
   background-position: 100%; /* Двигаем градиент вправо при наведении */
 }
+
+
+/* Обёртка для кнопок, чтобы они были в колонку с одинаковым отступом */
+.buttons-group {
+    display: flex;
+    flex-direction: column; /* вертикально */
+    gap: 16px; /* расстояние между кнопками */
+    align-items: stretch; /* чтобы обе тянулись на всю ширину */
+}
+
+/* Стили для каждой кнопки */
+.project-btn {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+
+    /* Тёмный фон, неонового/радужного эффекта нет */
+    background-color: #222;
+    color: #ccc;
+
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* При наведении меняем фон немного */
+.project-btn:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Стили иконки Figma, если нужно */
+.fig-ico {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.nav-pills .nav-link {
+    /* Пример: отступ справа (end) */
+    margin-right: 20px;
+}
+
+
+.nav-pills li.nav-item + li.nav-item {
+    margin-left: 10px; /* отступ слева для каждого следующего .nav-item */
+}
+
+
+@media (max-width: 576px) {
+    /* Делаем вкладки меньше: */
+    .nav.nav-pills .nav-link.gradient-btn {
+        font-size: 14px;       /* уменьшаем шрифт */
+        padding: 6px 10px;     /* уменьшаем внутренние отступы */
+    }
+    .nav.nav-pills {
+        gap: 0.5rem;           /* или me-2 для каждого li, если хотите */
+    }
+
+    /* Меняем соотношение сторон iFrame (если нужно) */
+    .ratio.ratio-16x9 {
+        aspect-ratio: 4 / 3;   /* Вместо 16/9 делаем чуть выше */
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Пример: увеличиваем шрифт body на планшетах */
+    body {
+        font-size: 18px;
+    }
+
+    /* Или чуть увеличиваем заголовки */
+    h1, .display-4 {
+        font-size: 2.5rem;
+    }
+
+    /* Пример: меняем размеры карточек, текста и т.д. */
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-text {
+        font-size: 1.1rem;
+    }
+
+    /* Кнопки, если хотите сделать крупнее */
+    .btn, .nav-link {
+        font-size: 1rem;
+        padding: 12px 20px; /* чуть больше отступ */
+    }
+}
+
+
 
 
 
